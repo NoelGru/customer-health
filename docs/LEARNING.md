@@ -60,3 +60,33 @@ Nach Risiko und nach Größe. Der Health Score sortiert die Liste, bei Gleichsta
 
 **3. Ein Kunde hat seit Wochen nichts gesagt, die Zahlen sind aber gut. Musst du dich melden?**
 Ja, aber entspannt. Schweigen ist kein Problem an sich, kann aber eines verdecken (z. B. beim Hotel Seeterrasse: das 30-Tage-Review hat nie stattgefunden). Ein kurzer Anruf mit einem konkreten Anlass, etwa einer kleinen Auswertung der letzten Wochen, wirkt nicht aufdringlich und hält die Beziehung warm.
+
+---
+
+## Phase 2: Health Score
+
+### Was wurde gebaut?
+
+1. **Projekt-Grundgerüst:** Vite, React, TypeScript, Tailwind, Recharts und Vitest sind installiert. `npm run dev` startet die Seite (vorerst nur eine Platzhalter-Liste), `npm test` startet die Tests, `npm run build` baut die fertige Seite.
+2. **`src/lib/health.ts`:** die Funktion `calculateHealth(kunde, stichtag)`. Sie gibt zurück: Score, Ampel, Begründungen (größter Abzug zuerst) und den empfohlenen nächsten Schritt. Dazu `sortByUrgency` für „dringendste zuerst“.
+3. **`src/lib/health.test.ts`:** 13 Tests, alle grün.
+4. **Git:** lokales Repository mit zwei Commits (Phase 0–1 und Phase 2). Autor ist die GitHub-noreply-Adresse, nicht die private E-Mail. Noch nichts hochgeladen.
+
+### Warum so?
+
+* **Alle Schwellen und Gewichte stehen oben in einer Tabelle (`RULES`).** Wie die Einstellungen an einem Thermostat: Will das Team „lange kein Kontakt“ ab 21 statt 30 Tagen, ändert man eine Zahl an einer Stelle.
+* **Die Funktion ist „rein“:** gleiche Eingabe, gleiches Ergebnis, wie ein Taschenrechner. Sie liest keine Uhrzeit und keine Datenbank, der Stichtag wird übergeben. Deshalb ist sie leicht zu testen und zu erklären.
+* **Begründungen enthalten echte Zahlen.** Nicht „Zahlung auffällig“, sondern „Zahlungsquote seit 4 Wochen gesunken (von 92 % auf 73 %)“. So kann man das Gespräch mit dem Kunden direkt mit Fakten beginnen.
+* **Tests sind Probe-Rechnungen.** Jede Regel hat einen eigenen kleinen Fall, dazu die Grenzwerte (genau 30 Tage zählen noch nicht, 31 schon). Ein letzter Test rechnet alle Beispielkunden durch und prüft 12/5/3. Ändert jemand versehentlich eine Regel, fällt das sofort auf.
+* **Gleichstand beim Sortieren:** Einkaufspark Nordtor und Athletikhalle Nord haben beide 45 Punkte. Der Einkaufspark (620 Plätze) steht oben, weil dort mehr auf dem Spiel steht.
+
+### Drei typische Fragen
+
+**1. Was machst du, wenn der Score etwas anderes sagt als dein Bauchgefühl?**
+Beides ernst nehmen. Der Score sieht nur Zahlen, ich weiß vielleicht, dass der Filialleiter gerade gewechselt hat. Wenn mein Gefühl öfter recht hat, fehlt dem Score ein Signal, dann gehört das ins Team-Gespräch und ggf. als neue Regel hinein. Der Score ist ein Werkzeug, keine Entscheidung.
+
+**2. Wie würdest du prüfen, ob die Gewichte stimmen?**
+Rückblickend: Welche Kunden haben in den letzten 12 Monaten gekündigt oder verkleinert, und wie sah ihr Score drei Monate vorher aus? Waren sie gelb oder rot, passt das Modell. Waren sie grün, fehlt ein Signal oder ein Gewicht ist zu niedrig. Das macht man am besten einmal im Quartal.
+
+**3. Die Zahlungsquote eines Kunden sinkt. Was tust du konkret?**
+Erst die Ursache vor Ort suchen, bevor ich den Kunden anrufe: Ist ein Schild verdeckt, der Automat defekt, hat sich etwas am Eingang geändert? Dann mit einer konkreten Beobachtung und einem Vorschlag auf den Kunden zugehen. Eine sinkende Zahlungsquote ärgert am Ende vor allem die Besucher des Kunden, deshalb hat er ein eigenes Interesse an einer schnellen Lösung.

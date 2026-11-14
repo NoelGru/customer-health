@@ -34,3 +34,13 @@ export const CHECKLIST: ChecklistItem[] = [
   { id: "live-announced", phase: "live", label: "Go-live an Parkende kommuniziert" },
   { id: "live-review30", phase: "live", label: "Review-Gespräch nach 30 Tagen" },
 ];
+
+/** Readiness: Wie viele Punkte der Checkliste sind erledigt? */
+export function readiness(done: string[]): { done: number; total: number; percent: number } {
+  const doneCount = CHECKLIST.filter((item) => done.includes(item.id)).length;
+  return {
+    done: doneCount,
+    total: CHECKLIST.length,
+    percent: Math.round((doneCount / CHECKLIST.length) * 100),
+  };
+}
