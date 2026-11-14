@@ -6,222 +6,219 @@
 <title>Mockup D · Mischung A + B</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
 <style>
-  /* Aus A: Farben, Schrift, Punktraster, Pillen-Buttons, Ruhe.
-     Aus B: App-Aufbau mit Seitenleiste, Tabelle, Score-Ring, nummerierte Abschnitte, Glas-Leiste, leiser Farbverlauf. */
+  /* Version 2: kein Seitenleiste, Inter statt Archivo/Serif, mehr Violett, kräftigere Glas-Karten, Score als Zahl.
+     Aus A geblieben: Punktraster, schwarze Pillen-Buttons, "ng."-Zeichen, Ruhe und Weißraum. */
   :root {
-    --bg: #fbfbfc; --ink: #0f1318; --ink-2: #2a3038; --mut: #59616a; --dim: #8a929b;
-    --card: #ffffff; --surf: #f3f4f7; --line: #e8eaee; --rand: #e2e5ea;
-    --accent: #3a4fc4; --accent-soft: rgba(58, 79, 196, .08);
-    --rot: #c8402a; --gelb: #c98a06; --gruen: #2f8f5b;
-    --shadow: 0 26px 50px -30px rgba(20, 24, 28, .25);
-    --r: 12px; --r-m: 16px; --r-l: 22px; --rail: 232px;
+    --bg: #e6e7ee; --ink: #111116; --ink-2: #2e2e37; --mut: #535360; --dim: #7c7c88;
+    --glass: rgba(255, 255, 255, .62); --glass-strong: rgba(255, 255, 255, .78);
+    --glass-edge: rgba(255, 255, 255, .85); --glass-line: rgba(18, 18, 30, .10);
+    --line: rgba(18, 18, 30, .08); --fill: rgba(18, 18, 30, .05);
+    --accent: #5046e8; --accent-2: #3d33c9; --accent-soft: rgba(80, 70, 232, .12); --blue: #3896ff;
+    --rot: #dc2626; --gelb: #d08700; --gruen: #15a34a;
+    --shadow: 0 24px 48px -26px rgba(40, 34, 120, .35), 0 2px 6px -2px rgba(25, 25, 55, .06);
+    --r: 12px; --r-m: 16px; --r-l: 22px;
     --mono: "JetBrains Mono", ui-monospace, monospace;
   }
   * { box-sizing: border-box; margin: 0; }
   body {
-    font-family: Archivo, -apple-system, system-ui, sans-serif; color: var(--ink); background-color: var(--bg); font-size: 14.5px; line-height: 1.5; -webkit-font-smoothing: antialiased;
+    font-family: Inter, system-ui, sans-serif; font-size: 14px; letter-spacing: -.006em; color: var(--ink); line-height: 1.5; -webkit-font-smoothing: antialiased;
+    background-color: var(--bg);
     background-image:
-      radial-gradient(700px 480px at 85% -10%, rgba(58, 79, 196, .09), transparent 60%),
-      radial-gradient(600px 460px at 20% 0%, rgba(56, 150, 255, .06), transparent 60%),
-      radial-gradient(rgba(70, 88, 170, .10) 1px, transparent 1px);
-    background-size: auto, auto, 22px 22px; background-attachment: fixed; min-height: 100vh;
+      radial-gradient(900px 600px at 88% -8%, rgba(80, 70, 232, .30), transparent 62%),
+      radial-gradient(760px 560px at 4% 6%, rgba(56, 150, 255, .18), transparent 60%),
+      radial-gradient(820px 640px at 55% 110%, rgba(255, 138, 76, .14), transparent 62%),
+      radial-gradient(rgba(80, 70, 232, .10) 1px, transparent 1px);
+    background-size: auto, auto, auto, 22px 22px; background-attachment: fixed; min-height: 100vh;
   }
-  .eyebrow { font-size: 10.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--mut); }
-  .serif { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; }
-  .card { background: var(--card); border: 1px solid var(--rand); border-radius: var(--r-l); box-shadow: var(--shadow); }
+  .eyebrow { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-2); }
+  .glass {
+    background: var(--glass); border: 1px solid var(--glass-edge); border-radius: var(--r-l);
+    box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, .9), 0 0 0 1px var(--glass-line);
+    backdrop-filter: blur(22px) saturate(1.4); -webkit-backdrop-filter: blur(22px) saturate(1.4);
+  }
+  .wrap { max-width: 1360px; margin: 0 auto; padding: 0 28px; }
 
-  .shell { display: grid; grid-template-columns: var(--rail) minmax(0, 1fr); min-height: 100vh; }
-  aside.rail { padding: 22px 14px; border-right: 1px solid var(--line); background: rgba(255, 255, 255, .7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); display: flex; flex-direction: column; gap: 3px; position: sticky; top: 0; height: 100vh; }
-  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; letter-spacing: -.02em; padding: 0 8px 22px; }
-  .mark { width: 30px; height: 30px; border-radius: 8px; background: var(--ink); color: #fff; display: grid; place-items: center; font-size: 13px; font-weight: 700; flex: none; }
-  .mark i { color: #8fa0ff; font-style: normal; }
-  .nav { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 999px; color: var(--mut); font-weight: 500; cursor: pointer; }
-  .nav:hover { color: var(--ink); }
-  .nav.on { background: var(--ink); color: #fff; }
-  .nav .count { margin-left: auto; font-family: var(--mono); font-size: 11px; color: inherit; opacity: .6; }
-  .rail .label { margin: 18px 12px 6px; }
-  .rail .foot { margin-top: auto; font-size: 11.5px; color: var(--dim); padding: 0 12px; line-height: 1.45; }
+  .bar { position: sticky; top: 0; z-index: 10; background: rgba(240, 240, 247, .6); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); border-bottom: 1px solid rgba(255, 255, 255, .7); box-shadow: 0 1px 0 var(--line); }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15.5px; letter-spacing: -.02em; white-space: nowrap; }
+  .stand { white-space: nowrap; }
+  .mark { width: 28px; height: 28px; border-radius: 8px; background: var(--ink); color: #fff; display: grid; place-items: center; font-size: 12px; font-weight: 700; flex: none; }
+  .mark i { color: #a39dff; font-style: normal; }
+  .brand .tag { font-family: var(--mono); font-size: 10.5px; font-weight: 500; color: var(--accent-2); background: var(--accent-soft); padding: 2px 8px; border-radius: 6px; letter-spacing: .06em; }
+  .stand { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11px; color: var(--mut); background: var(--glass-strong); border: 1px solid var(--glass-line); padding: 6px 11px; border-radius: 999px; }
+  .stand::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gruen); box-shadow: 0 0 0 3px rgba(21, 163, 74, .18); }
 
-  main { padding: 28px 30px 40px; min-width: 0; }
-  .top { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 22px; flex-wrap: wrap; }
-  h1 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 700; letter-spacing: -.04em; line-height: 1.08; margin-top: 10px; }
-  h1 .serif { font-size: 1.06em; letter-spacing: -.01em; }
-  .sub { color: var(--mut); font-size: 15.5px; margin-top: 6px; }
-  .stand { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--mut); background: var(--card); border: 1px solid var(--rand); padding: 7px 12px; border-radius: 999px; }
-  .stand::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gruen); box-shadow: 0 0 0 3px rgba(47, 143, 91, .16); }
+  header.top { padding: 28px 0 20px; }
+  h1 { font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -.035em; line-height: 1.12; margin-top: 8px; }
+  h1 em { font-style: normal; background: linear-gradient(90deg, var(--accent-2), var(--blue)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sub { color: var(--mut); font-size: 15px; margin-top: 4px; }
 
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
-  .kpi { padding: 16px 18px; border-radius: var(--r-m); }
-  .kpi .v { font-size: 32px; font-weight: 700; letter-spacing: -.045em; line-height: 1.1; margin-top: 6px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 18px; }
+  .kpi { padding: 16px 18px; border-radius: var(--r-m); position: relative; overflow: hidden; }
+  .kpi .v { font-size: 32px; font-weight: 800; letter-spacing: -.045em; line-height: 1.1; margin-top: 6px; font-variant-numeric: tabular-nums; }
   .kpi .s { color: var(--mut); font-size: 13px; }
   .kpi .v.rot { color: var(--rot); }
+  .kpi.hi { background: linear-gradient(150deg, rgba(80, 70, 232, .22), rgba(56, 150, 255, .10) 60%, rgba(255, 255, 255, .5)); }
 
-  .layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(330px, 1fr); gap: 16px; align-items: start; }
-  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; padding: 14px 14px 12px; align-items: center; }
-  .seg { display: inline-flex; background: var(--surf); padding: 3px; border-radius: 999px; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(360px, 1fr); gap: 16px; align-items: start; padding-bottom: 10px; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; padding: 14px 16px 12px; align-items: center; }
+  .seg { display: inline-flex; background: var(--fill); padding: 3px; border-radius: 999px; }
   .seg button { border: 0; background: transparent; font: inherit; font-weight: 500; padding: 6px 14px; border-radius: 999px; color: var(--mut); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
-  .seg button.on { background: var(--card); color: var(--ink); box-shadow: 0 1px 3px rgba(15, 19, 24, .1); }
+  .seg button.on { background: var(--ink); color: #fff; }
   .seg i { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
-  .select { border: 1px solid var(--rand); background: var(--card); border-radius: 999px; padding: 7px 14px; font: inherit; color: var(--ink-2); }
-  .toolbar .sort { margin-left: auto; font-size: 12px; color: var(--dim); }
+  .select { border: 1px solid var(--glass-line); background: var(--glass-strong); border-radius: 999px; padding: 7px 14px; font: inherit; color: var(--ink-2); }
+  .toolbar .sort { margin-left: auto; font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; color: var(--dim); text-transform: uppercase; }
 
   table { width: 100%; border-collapse: collapse; }
-  th { text-align: left; font-size: 10.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--dim); padding: 8px 14px; }
-  td { padding: 13px 14px; border-top: 1px solid var(--line); vertical-align: top; }
+  th { text-align: left; font-family: var(--mono); font-size: 10.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); padding: 8px 16px; }
+  th.r, td.r { text-align: right; }
+  td { padding: 13px 16px; border-top: 1px solid var(--line); vertical-align: top; }
   tr[data-id] { cursor: pointer; }
-  tr[data-id]:hover td { background: var(--surf); }
+  tr[data-id]:hover td { background: rgba(255, 255, 255, .55); }
   tr.sel td { background: var(--accent-soft) !important; }
   tr.sel td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
-  .name { font-weight: 600; letter-spacing: -.01em; }
+  .name { font-weight: 600; }
   .meta { color: var(--mut); font-size: 12.5px; }
-  .why { color: var(--ink-2); font-size: 13.5px; max-width: 360px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-  .badge { display: inline-flex; align-items: center; gap: 7px; font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
-  .badge::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 14%, transparent); }
-  .tag { display: inline-block; font-size: 11.5px; font-weight: 500; padding: 2px 9px; border-radius: 999px; background: var(--surf); color: var(--mut); white-space: nowrap; }
+  .why { color: var(--ink-2); font-size: 13.5px; max-width: 380px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .score { display: inline-grid; place-items: center; min-width: 40px; height: 30px; padding: 0 8px; border-radius: 9px; font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums; color: color-mix(in srgb, var(--c) 82%, #000); background: color-mix(in srgb, var(--c) 12%, transparent); }
+  .tag { display: inline-block; font-size: 11.5px; font-weight: 500; padding: 2px 9px; border-radius: 999px; background: var(--fill); color: var(--ink-2); white-space: nowrap; }
 
-  .detail { padding: 24px; position: sticky; top: 20px; }
+  .detail { padding: 24px; position: sticky; top: 80px; }
   .d-top { display: flex; gap: 16px; align-items: center; }
-  .ring { width: 68px; height: 68px; border-radius: 50%; flex: none; display: grid; place-items: center; background: conic-gradient(var(--c) calc(var(--p) * 1%), var(--surf) 0); }
-  .ring span { width: 54px; height: 54px; border-radius: 50%; background: var(--card); display: grid; place-items: center; font-weight: 700; font-size: 20px; letter-spacing: -.04em; }
-  .d-top h2 { font-size: 22px; font-weight: 700; letter-spacing: -.03em; line-height: 1.15; margin-top: 4px; }
-  .status { font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--c); }
+  .d-top h2 { font-size: 22px; font-weight: 700; letter-spacing: -.03em; line-height: 1.2; margin-top: 6px; }
+  .ring { width: 72px; height: 72px; border-radius: 50%; flex: none; display: grid; place-items: center; background: conic-gradient(var(--c) calc(var(--p) * 1%), rgba(18, 18, 30, .07) 0); box-shadow: 0 10px 24px -14px var(--c); }
+  .ring span { width: 58px; height: 58px; border-radius: 50%; background: #fff; display: grid; place-items: center; font-weight: 800; font-size: 21px; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: var(--c); background: color-mix(in srgb, var(--c) 11%, transparent); }
+  .chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--c); }
   .sec { margin-top: 22px; }
   .sec > .eyebrow { margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
-  .num { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 10.5px; letter-spacing: 0; }
-  .legend { display: flex; gap: 16px; font-size: 12px; color: var(--mut); margin-bottom: 6px; }
-  .legend span::before { content: ""; display: inline-block; width: 14px; height: 2px; vertical-align: middle; margin-right: 6px; background: var(--c); }
-  .legend .dash::before { background: repeating-linear-gradient(90deg, var(--c) 0 4px, transparent 4px 7px); }
+  .num { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 6px; background: var(--accent-soft); color: var(--accent-2); font-size: 11px; letter-spacing: 0; }
+  .chartbox { background: var(--glass-strong); border: 1px solid var(--glass-line); border-radius: var(--r-m); padding: 12px 12px 6px; }
+  .legend { display: flex; gap: 14px; font-size: 12px; color: var(--mut); padding: 0 4px 6px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
   .reasons { list-style: none; padding: 0; display: grid; gap: 6px; }
-  .reasons li { display: flex; gap: 10px; align-items: baseline; background: var(--surf); border-radius: 12px; padding: 9px 12px; font-size: 14px; }
-  .reasons b { font-family: var(--mono); font-size: 11.5px; font-weight: 500; color: var(--rot); min-width: 26px; }
-  .next { border-radius: var(--r-m); padding: 15px 17px; font-size: 14.5px; color: var(--ink-2); background: linear-gradient(150deg, rgba(58, 79, 196, .10), rgba(56, 150, 255, .05) 60%, rgba(255, 255, 255, 0)); border: 1px solid rgba(58, 79, 196, .18); }
-  .next .serif { font-size: 19px; color: var(--accent); }
+  .reasons li { display: flex; gap: 10px; align-items: baseline; background: var(--glass-strong); border: 1px solid var(--glass-line); border-radius: 10px; padding: 9px 12px; font-size: 13.5px; }
+  .reasons b { font-family: var(--mono); font-size: 11.5px; font-weight: 500; color: var(--rot); background: rgba(220, 38, 38, .08); border-radius: 6px; padding: 1px 6px; flex: none; }
+  .next { border-radius: var(--r-m); padding: 14px 16px; font-size: 14px; color: var(--ink-2); background: linear-gradient(150deg, rgba(80, 70, 232, .22), rgba(56, 150, 255, .10) 60%, rgba(255, 138, 76, .10)); border: 1px solid rgba(80, 70, 232, .30); }
+  .next strong { color: var(--accent-2); }
   .track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
   .track div { font-size: 12px; color: var(--mut); }
-  .track div::before { content: ""; display: block; height: 6px; border-radius: 99px; background: var(--line); margin-bottom: 6px; background-image: linear-gradient(var(--ink), var(--ink)); background-repeat: no-repeat; background-size: var(--w) 100%; }
+  .track div::before { content: ""; display: block; height: 6px; border-radius: 99px; background: var(--fill); margin-bottom: 6px; background-image: linear-gradient(90deg, var(--accent), var(--blue)); background-repeat: no-repeat; background-size: var(--w) 100%; }
   .track .cur { color: var(--ink); font-weight: 600; }
   .open { font-size: 12.5px; color: var(--mut); margin-top: 8px; }
-  .note { font-size: 13.5px; color: var(--mut); border-left: 2px solid var(--rand); padding-left: 12px; margin-top: 12px; }
-  .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--ink); color: #fff; border: 0; border-radius: 999px; padding: 13px 22px; font: inherit; font-weight: 500; font-size: 15px; cursor: pointer; }
-  .hint { font-size: 12px; color: var(--dim); margin-top: 8px; }
-  footer { margin-top: 28px; font-size: 12.5px; color: var(--dim); }
+  .note { font-size: 13px; color: var(--mut); border-left: 2px solid rgba(80, 70, 232, .35); padding-left: 12px; margin-top: 12px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--ink); color: #fff; border: 0; border-radius: 999px; padding: 13px 22px; font: inherit; font-weight: 600; font-size: 14.5px; cursor: pointer; box-shadow: 0 10px 24px -12px rgba(80, 70, 232, .7); }
+  .btn span { color: #a39dff; }
+  .hint { font-family: var(--mono); font-size: 11px; color: var(--dim); margin-top: 8px; }
+  footer { padding: 26px 0 36px; font-family: var(--mono); font-size: 11.5px; color: var(--dim); }
 
   .cards { display: none; }
-  @media (max-width: 1100px) {
+  @media (max-width: 1080px) {
     .layout { grid-template-columns: 1fr; }
     .detail { position: static; }
   }
-  @media (max-width: 860px) {
-    .shell { grid-template-columns: 1fr; }
-    aside.rail { position: sticky; top: 0; z-index: 5; height: auto; flex-direction: row; align-items: center; padding: 10px 16px; border-right: 0; border-bottom: 1px solid var(--line); overflow-x: auto; gap: 4px; }
-    .brand { padding: 0 8px 0 0; }
-    .brand b { display: none; }
-    .rail .label, .rail .foot { display: none; }
-    .nav { white-space: nowrap; padding: 7px 12px; }
-    main { padding: 20px 16px 32px; }
-    .kpis { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 760px) {
+    .wrap { padding: 0 16px; }
+    .brand .tag { display: none; }
+    header.top { padding: 20px 0 16px; }
+    .kpis { grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .kpi .v { font-size: 28px; }
     table { display: none; }
-    .cards { display: grid; gap: 0; }
-    .mc { border-top: 1px solid var(--line); padding: 13px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 12px; cursor: pointer; }
+    .cards { display: grid; }
+    .mc { border-top: 1px solid var(--line); padding: 13px 16px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 12px; cursor: pointer; }
     .mc.sel { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); }
     .mc .why { grid-column: 1 / 3; }
     .toolbar .sort { margin-left: 0; width: 100%; }
     .detail { padding: 18px; }
+    .ring { width: 64px; height: 64px; } .ring span { width: 51px; height: 51px; font-size: 19px; }
   }
 </style>
 </head>
 <body>
-<div class="shell">
-  <aside class="rail">
-    <div class="brand"><span class="mark">ng<i>.</i></span><b>Customer Health</b></div>
-    <div class="nav on">Übersicht<span class="count" id="c-all"></span></div>
-    <div class="nav">Gefährdet<span class="count" id="c-risk"></span></div>
-    <div class="nav">Onboarding<span class="count" id="c-onb"></span></div>
-    <div class="nav">Berichte</div>
-    <div class="foot">Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden</div>
-  </aside>
-  <main>
-    <div class="top">
-      <div><p class="eyebrow">Customer Success · Paid Parking</p><h1>Wer braucht <span class="serif">heute</span> Aufmerksamkeit?</h1><p class="sub" id="sub"></p></div>
-      <span class="stand" id="asof"></span>
-    </div>
-    <div class="kpis" id="kpis"></div>
-    <div class="layout">
-      <div class="card" style="padding:0;overflow:hidden">
-        <div class="toolbar">
-          <div class="seg"><button class="on">Alle</button><button><i style="background:var(--rot)"></i>Rot</button><button><i style="background:var(--gelb)"></i>Gelb</button><button><i style="background:var(--gruen)"></i>Grün</button></div>
-          <select class="select"><option>Alle Segmente</option></select>
-          <select class="select"><option>Alle Phasen</option></select>
-          <span class="sort">Dringendste zuerst</span>
-        </div>
-        <table><thead><tr><th>Kunde</th><th>Phase</th><th>Score</th><th>Hauptgrund</th></tr></thead><tbody id="tbody"></tbody></table>
-        <div class="cards" id="cards"></div>
+<div class="bar"><div class="wrap">
+  <div class="brand"><span class="mark">ng<i>.</i></span>Customer Health<span class="tag">PROTOTYP</span></div>
+  <span class="stand" id="asof"></span>
+</div></div>
+
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">Customer Success · Paid Parking</p>
+    <h1>Wer braucht <em>heute</em> Aufmerksamkeit?</h1>
+    <p class="sub" id="sub"></p>
+  </header>
+  <div class="kpis" id="kpis"></div>
+  <div class="layout">
+    <div class="glass" style="overflow:hidden">
+      <div class="toolbar">
+        <div class="seg"><button class="on">Alle</button><button><i style="background:var(--rot)"></i>Rot</button><button><i style="background:var(--gelb)"></i>Gelb</button><button><i style="background:var(--gruen)"></i>Grün</button></div>
+        <select class="select"><option>Alle Segmente</option></select>
+        <select class="select"><option>Alle Phasen</option></select>
+        <span class="sort">↓ Dringendste zuerst</span>
       </div>
-      <div class="card detail" id="detail"></div>
+      <table><thead><tr><th>Kunde</th><th>Segment</th><th>Phase</th><th>Hauptgrund</th><th class="r">Score</th></tr></thead><tbody id="tbody"></tbody></table>
+      <div class="cards" id="cards"></div>
     </div>
-    <footer>Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden</footer>
-  </main>
+    <div class="glass detail" id="detail"></div>
+  </div>
+  <footer>Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden</footer>
 </div>
 
 <script type="module">
-  import { rows, kpis, detail, asOfLabel, formatPercent, checklistFor, chartFor, wireSelection, esc } from "./shared.js";
-  const COLOR = { rot: "#c8402a", gelb: "#c98a06", gruen: "#2f8f5b" };
+  import { rows, kpis, detail, asOf, formatPercent, checklistFor, chartFor, wireSelection, esc } from "./shared.js";
+  const COLOR = { rot: "#dc2626", gelb: "#d08700", gruen: "#15a34a" };
   const LABEL = { rot: "Gefährdet", gelb: "Beobachten", gruen: "Stabil" };
 
-  document.getElementById("asof").textContent = `Stand ${asOfLabel}`;
+  document.getElementById("asof").textContent = `Stand ${new Date(asOf).toLocaleDateString("de-DE", { day: "numeric", month: "short", year: "numeric" })}`;
   document.getElementById("sub").textContent = `${kpis.rot + kpis.gelb} von ${kpis.total} Kunden brauchen Aufmerksamkeit. Jede Ampel mit Begründung.`;
-  document.getElementById("c-all").textContent = kpis.total;
-  document.getElementById("c-risk").textContent = kpis.rot + kpis.gelb;
-  document.getElementById("c-onb").textContent = kpis.onboarding;
   document.getElementById("kpis").innerHTML = `
-    <div class="card kpi"><p class="eyebrow">Kunden</p><div class="v">${kpis.total}</div><div class="s">Parkflächen gesamt</div></div>
-    <div class="card kpi"><p class="eyebrow">Gefährdet</p><div class="v rot">${kpis.rot}</div><div class="s">+ ${kpis.gelb} beobachten</div></div>
-    <div class="card kpi"><p class="eyebrow">Onboarding</p><div class="v">${kpis.onboarding}</div><div class="s">noch nicht live</div></div>
-    <div class="card kpi"><p class="eyebrow">Ø Zahlungsquote</p><div class="v">${formatPercent(kpis.avgPayment)}</div><div class="s">letzte Woche, live</div></div>`;
+    <div class="glass kpi"><p class="eyebrow">Kunden</p><div class="v">${kpis.total}</div><div class="s">Parkflächen gesamt</div></div>
+    <div class="glass kpi hi"><p class="eyebrow">Gefährdet</p><div class="v rot">${kpis.rot}</div><div class="s">+ ${kpis.gelb} beobachten</div></div>
+    <div class="glass kpi"><p class="eyebrow">Onboarding</p><div class="v">${kpis.onboarding}</div><div class="s">noch nicht live</div></div>
+    <div class="glass kpi"><p class="eyebrow">Ø Zahlungsquote</p><div class="v">${formatPercent(kpis.avgPayment)}</div><div class="s">letzte Woche, live</div></div>`;
 
   const tbody = document.getElementById("tbody"), cards = document.getElementById("cards");
   const renderList = (sel) => {
     tbody.innerHTML = rows.map((r) => `
       <tr data-id="${r.id}" class="${r.id === sel ? "sel" : ""}">
-        <td><div class="name">${esc(r.name)}</div><div class="meta">${r.segmentLabel} · ${esc(r.city)}</div></td>
+        <td><div class="name">${esc(r.name)}</div><div class="meta">${esc(r.city)} · ${r.spaces} Plätze</div></td>
+        <td class="meta" style="font-size:13px;white-space:nowrap">${r.segmentLabel}</td>
         <td><span class="tag">${r.phaseLabel}</span></td>
-        <td><span class="badge" style="--c:${COLOR[r.health.status]}">${r.health.score}</span></td>
-        <td class="why">${r.health.reasons[0] ? esc(r.health.reasons[0].text) : "<span class='meta'>Keine Auffälligkeiten</span>"}</td>
+        <td><div class="why">${r.health.reasons[0] ? esc(r.health.reasons[0].text) : "<span class='meta'>Keine Auffälligkeiten</span>"}</div></td>
+        <td class="r"><span class="score" style="--c:${COLOR[r.health.status]}">${r.health.score}</span></td>
       </tr>`).join("");
     cards.innerHTML = rows.map((r) => `
       <div class="mc ${r.id === sel ? "sel" : ""}" data-id="${r.id}">
         <div><div class="name">${esc(r.name)}</div><div class="meta">${r.segmentLabel} · ${esc(r.city)} <span class="tag">${r.phaseLabel}</span></div></div>
-        <span class="badge" style="--c:${COLOR[r.health.status]}">${r.health.score}</span>
+        <span class="score" style="--c:${COLOR[r.health.status]}">${r.health.score}</span>
         ${r.health.reasons[0] ? `<div class="why">${esc(r.health.reasons[0].text)}</div>` : ""}
       </div>`).join("");
   };
 
   const renderDetail = (r) => {
-    const chart = chartFor(r, { payment: "#0f1318", occupancy: "#3a4fc4", dash: "5 4" }, { grid: "#eceef1", label: "#8a929b", stroke: 2.2 });
+    const chart = chartFor(r, { payment: "#5046e8", occupancy: "#3896ff", dash: "5 4" }, { grid: "rgba(18,18,30,.08)", label: "#7c7c88", font: "JetBrains Mono, monospace", stroke: 2.5 });
     const phases = checklistFor(r);
     const open = phases.flatMap((p) => p.items).filter((i) => !i.done);
     const c = COLOR[r.health.status];
     document.getElementById("detail").innerHTML = `
       <div class="d-top">
         <div class="ring" style="--p:${r.health.score};--c:${c}"><span>${r.health.score}</span></div>
-        <div><p class="status" style="--c:${c}">${LABEL[r.health.status]}</p><h2>${esc(r.name)}</h2><div class="meta">${r.segmentLabel} · ${esc(r.city)} · ${r.spaces} Stellplätze</div></div>
+        <div><span class="chip" style="--c:${c}">${LABEL[r.health.status]}</span><h2>${esc(r.name)}</h2><div class="meta">${r.segmentLabel} · ${esc(r.city)} · ${r.spaces} Stellplätze</div></div>
       </div>
       <div class="sec"><p class="eyebrow"><span class="num">1</span>Verlauf · 8 Wochen</p>
-        ${chart ? `<div class="legend"><span style="--c:#0f1318">Zahlungsquote</span><span class="dash" style="--c:#3a4fc4">Auslastung</span></div>${chart}` : `<p class="note" style="margin-top:0">Noch keine Betriebsdaten, der Kunde ist im Onboarding.</p>`}
+        ${chart ? `<div class="chartbox"><div class="legend"><span><i style="background:#5046e8"></i>Zahlungsquote</span><span><i style="background:#3896ff"></i>Auslastung</span></div>${chart}</div>` : `<p class="note" style="margin-top:0">Noch keine Betriebsdaten, der Kunde ist im Onboarding.</p>`}
       </div>
       <div class="sec"><p class="eyebrow"><span class="num">2</span>Warum ${{ rot: "rot", gelb: "gelb", gruen: "grün" }[r.health.status]}?</p>
         ${r.health.reasons.length ? `<ul class="reasons">${r.health.reasons.map((x) => `<li><b>${x.points}</b>${esc(x.text)}</li>`).join("")}</ul>` : `<p class="note" style="margin-top:0">Keine Auffälligkeiten.</p>`}
       </div>
-      <div class="sec"><p class="eyebrow"><span class="num">3</span>Nächster Schritt</p><div class="next"><span class="serif">Empfehlung:</span> ${esc(r.health.nextStep)}</div></div>
+      <div class="sec"><p class="eyebrow"><span class="num">3</span>Nächster Schritt</p><div class="next"><strong>Empfehlung:</strong> ${esc(r.health.nextStep)}</div></div>
       <div class="sec"><p class="eyebrow"><span class="num">4</span>Readiness · ${r.readiness.done}/${r.readiness.total}</p>
         <div class="track">${phases.map((p) => `<div class="${p.current ? "cur" : ""}" style="--w:${(p.items.filter((i) => i.done).length / p.items.length) * 100}%">${p.label}</div>`).join("")}</div>
         ${open.length ? `<p class="open">Offen: ${open.map((i) => esc(i.label)).join(" · ")}</p>` : ""}
         <p class="note">${esc(r.note)}</p>
       </div>
-      ${r.health.status !== "gruen" ? `<div class="sec"><button class="btn">✦ Bericht &amp; Mail-Entwurf</button><p class="hint">Text vorab mit Claude erzeugt</p></div>` : ""}`;
+      ${r.health.status !== "gruen" ? `<div class="sec"><button class="btn"><span>✦</span> Bericht &amp; Mail-Entwurf</button><p class="hint">Text vorab mit Claude erzeugt</p></div>` : ""}`;
   };
 
   const select = (r) => { renderList(r.id); renderDetail(r); };

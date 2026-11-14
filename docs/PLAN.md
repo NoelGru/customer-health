@@ -195,4 +195,4 @@ Größen realistisch: Fitnessstudio 40 bis 70 Plätze, Klinik 140 bis 320, Shopp
 
 Vite + React + TypeScript · Tailwind CSS · Recharts · Vitest · Deployment als statische Seite auf Vercel. Keine API-Schlüssel, keine Secrets, kein Backend.
 
-Design: neutral und ruhig (helles Grau, eine eigene Akzentfarbe, Ampelfarben nur für den Status). Kein Wemolo-Logo, keine Wemolo-Farben. Footer: „Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden“.
+Design (entschieden in Phase 3, nach vier Mockups in `design/mockups/`): Mockup D. App-Aufbau mit Tabelle und Detailspalte, Glas-Karten auf hellem Farbverlauf, Schrift Inter + JetBrains Mono, Ampelfarben nur für den Status. Akzentfarbe ist bewusst das Violett aus dem Wemolo-Logo (#5046E8), auf Noels Wunsch; Logo, Name und sonstiges Branding werden nicht übernommen. Footer: „Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden“.

@@ -1,1 +1,82 @@
 @import "tailwindcss";
+
+/* Design-Grundlagen (Mockup D): Inter + JetBrains Mono, Violett #5046E8, Glas-Karten, Ampelfarben. */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-ink: #111116;
+  --color-ink-2: #2e2e37;
+  --color-mut: #535360;
+  --color-dim: #7c7c88;
+  --color-line: rgb(18 18 30 / 0.08);
+  --color-fill: rgb(18 18 30 / 0.05);
+  --color-accent: #5046e8;
+  --color-accent-2: #3d33c9;
+  --color-accent-soft: rgb(80 70 232 / 0.12);
+  --color-blue: #3896ff;
+  --color-rot: #dc2626;
+  --color-gelb: #d08700;
+  --color-gruen: #15a34a;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-ink antialiased;
+    font-size: 14px;
+    letter-spacing: -0.006em;
+    background-color: #e6e7ee;
+    background-image:
+      radial-gradient(900px 600px at 88% -8%, rgb(80 70 232 / 0.28), transparent 62%),
+      radial-gradient(760px 560px at 4% 6%, rgb(56 150 255 / 0.18), transparent 60%),
+      radial-gradient(820px 640px at 55% 110%, rgb(255 138 76 / 0.14), transparent 62%),
+      radial-gradient(rgb(80 70 232 / 0.1) 1px, transparent 1px);
+    background-size: auto, auto, auto, 22px 22px;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  button, select { font: inherit; }
+}
+
+@layer components {
+  /* Glas-Karte: halbtransparent, weichgezeichneter Hintergrund, helle Lichtkante */
+  .glass {
+    background: rgb(255 255 255 / 0.62);
+    border: 1px solid rgb(255 255 255 / 0.85);
+    border-radius: 22px;
+    box-shadow:
+      0 24px 48px -26px rgb(40 34 120 / 0.35),
+      0 2px 6px -2px rgb(25 25 55 / 0.06),
+      inset 0 1px 0 rgb(255 255 255 / 0.9),
+      0 0 0 1px rgb(18 18 30 / 0.1);
+    backdrop-filter: blur(22px) saturate(1.4);
+    -webkit-backdrop-filter: blur(22px) saturate(1.4);
+  }
+  .glass-inner {
+    background: rgb(255 255 255 / 0.78);
+    border: 1px solid rgb(18 18 30 / 0.1);
+  }
+  .topbar {
+    background: rgb(240 240 247 / 0.6);
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    border-bottom: 1px solid rgb(255 255 255 / 0.7);
+    box-shadow: 0 1px 0 rgb(18 18 30 / 0.08);
+  }
+  /* Kleine Überschrift in Mono-Schrift */
+  .eyebrow {
+    @apply font-mono text-[11px] font-medium uppercase text-accent-2;
+    letter-spacing: 0.14em;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, var(--color-accent-2), var(--color-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .overlay-bg {
+    background: rgb(230 231 238 / 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}

@@ -90,3 +90,36 @@ Rückblickend: Welche Kunden haben in den letzten 12 Monaten gekündigt oder ver
 
 **3. Die Zahlungsquote eines Kunden sinkt. Was tust du konkret?**
 Erst die Ursache vor Ort suchen, bevor ich den Kunden anrufe: Ist ein Schild verdeckt, der Automat defekt, hat sich etwas am Eingang geändert? Dann mit einer konkreten Beobachtung und einem Vorschlag auf den Kunden zugehen. Eine sinkende Zahlungsquote ärgert am Ende vor allem die Besucher des Kunden, deshalb hat er ein eigenes Interesse an einer schnellen Lösung.
+
+---
+
+## Phase 3: Oberfläche
+
+### Was wurde gebaut?
+
+1. **Design zuerst als Mockups** (`design/mockups/`): drei Richtungen (Noel-Stil, Gatekit-Stil, Logbuch), daraus eine Mischung D in drei Runden verfeinert. Erst danach echter Code.
+2. **Die App** (`src/App.tsx` und `src/components/`):
+   * Kopfzeile mit 4 Kennzahlen: Kunden gesamt, gefährdet (+ beobachten), im Onboarding, Ø Zahlungsquote.
+   * Liste mit Ampel-Score, Filtern (Ampel, Segment, Phase) und „dringendste zuerst“.
+   * Detailansicht: Score-Ring, Eckdaten (Ansprechperson, Go-live, letzter Kontakt, Tickets), 8-Wochen-Diagramm, Begründungen, nächster Schritt, Readiness mit aufklappbarer Checkliste, letzte Notiz.
+3. **`src/lib/view.ts`**: Filter und Kennzahlen als eigene, getestete Funktionen (jetzt 17 Tests).
+
+### Warum so?
+
+* **Erst Mockups, dann Code:** Design-Entscheidungen sind billig, solange es nur Skizzen sind. Wie beim Hausbau: Grundriss auf Papier ändern kostet nichts, eine Wand versetzen schon.
+* **Tabelle + Detailspalte:** Links „wer“, rechts „warum und was tun“. Ein Klick genügt, man verliert die Liste nie aus dem Blick.
+* **Jeder Kunde hat eine eigene Adresse** (`#/kunde/c07`). Man kann einen Kunden direkt verlinken, z. B. im Team-Chat oder im Video.
+* **Handy:** Die Liste wird zu Karten, die Detailansicht öffnet sich als eigene Seite mit „Zur Übersicht“. Auf dem Desktop zeigt die Detailspalte ohne Auswahl automatisch den dringendsten Kunden.
+* **Kleine Details, die im Alltag helfen:** „überfällig“ beim geplanten Go-live, unter „Offen“ nur die Punkte der aktuellen Phase, Filter mit „Zurücksetzen“.
+* **Logik bleibt außerhalb der Oberfläche:** Die Komponenten zeigen nur an. Rechnen, filtern und sortieren passiert in `src/lib/` und ist getestet.
+
+### Drei typische Fragen
+
+**1. Was gehört auf ein Customer-Health-Dashboard, und was nicht?**
+Nur, was zu einer Handlung führt: Wer braucht Aufmerksamkeit, warum, und was ist der nächste Schritt. Alles andere (Umsatzdetails, Rohdaten) gehört in Berichte. Ein Dashboard, auf dem man erst suchen muss, wird nach zwei Wochen nicht mehr geöffnet.
+
+**2. Wie würdest du so ein Tool im Team einführen?**
+Klein anfangen: eine Woche lang im Team-Weekly gemeinsam die roten Kunden durchgehen. Feedback sammeln, welche Begründungen fehlen oder falsch sind, und die Regeln anpassen. Erst wenn das Team dem Score vertraut, wird er zur festen Routine.
+
+**3. Wie gehst du in ein Gespräch mit einem gefährdeten Kunden?**
+Vorbereitet und mit Zahlen, aber ohne Vorwurf: „Uns ist aufgefallen, dass die Zahlungsquote seit vier Wochen sinkt, und wir haben eine Vermutung.“ Dann zuhören, eine konkrete Lösung mit Datum anbieten und nach zwei Wochen nachfassen. Die Detailansicht ist genau die Vorbereitung für dieses Gespräch.
