@@ -93,7 +93,7 @@ export default function App() {
         </div>
 
         <footer className="py-7 font-mono text-[11.5px] text-dim">
-          Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden · Datenstand {formatDate(asOf, "short")}
+          Prototyp von Noel Gruber · Beispieldaten · Datenstand {formatDate(asOf, "short")}
         </footer>
       </main>
     </>
