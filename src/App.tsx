@@ -14,6 +14,12 @@ const views = buildViews(customers, asOf);
 const kpis = portfolioKpis(views);
 const attention = kpis.rot + kpis.gelb;
 
+// Desktop: Die Detailspalte bleibt oben stehen, ist höchstens so hoch wie das Fenster
+// und hat einen eigenen Scrollbereich. So lässt sie sich unabhängig von der Liste scrollen.
+// Ist ihr Ende erreicht, scrollt die Seite weiter (kein "Festhängen" ganz oben auf der Seite).
+const DESKTOP_PANE =
+  "detail-pane lg:sticky lg:top-20 lg:max-h-[calc(100dvh-6rem)] lg:overflow-y-auto lg:overscroll-auto lg:rounded-[22px]";
+
 export default function App() {
   const [filters, setFilters] = useState<Filters>(NO_FILTERS);
   const [selectedId, select] = useHashSelection();
@@ -35,15 +41,17 @@ export default function App() {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && select(null);
     window.addEventListener("keydown", onKey);
     const mobile = window.matchMedia("(max-width: 1023px)").matches;
-    if (mobile) {
-      document.body.style.overflow = "hidden";
-      document.getElementById("detail-scroll")?.scrollTo(0, 0);
-    }
+    if (mobile) document.body.style.overflow = "hidden";
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
   }, [selected, select]);
+
+  // Neuer Kunde in der Detailansicht: deren Scrollbereich wieder nach oben setzen
+  useEffect(() => {
+    document.getElementById("detail-scroll")?.scrollTo(0, 0);
+  }, [shown?.id]);
 
   return (
     <>
@@ -74,8 +82,8 @@ export default function App() {
               aria-label="Kundendetails"
               className={
                 selected
-                  ? "overlay-bg fixed inset-0 z-30 overflow-y-auto overscroll-contain p-3 sm:p-6 lg:static lg:z-auto lg:overflow-visible lg:bg-transparent lg:p-0 lg:backdrop-filter-none lg:sticky lg:top-20"
-                  : "hidden lg:sticky lg:top-20 lg:block"
+                  ? `overlay-bg fixed inset-0 z-30 overflow-y-auto overscroll-contain p-3 sm:p-6 lg:z-auto lg:bg-transparent lg:p-0 lg:backdrop-filter-none ${DESKTOP_PANE}`
+                  : `hidden lg:block ${DESKTOP_PANE}`
               }
             >
               <CustomerDetail v={shown} asOf={asOf} onClose={() => select(null)} />

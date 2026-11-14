@@ -86,6 +86,11 @@
   @media (prefers-reduced-motion: reduce) {
     .shimmer, .animate-fade-up { animation: none; }
   }
+  /* Eigener Scrollbereich der Detailspalte: schmale, dezente Scrollleiste */
+  .detail-pane {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(80 70 232 / 0.3) transparent;
+  }
   .overlay-bg {
     background: rgb(232 233 241 / 0.97);
     backdrop-filter: blur(10px);
