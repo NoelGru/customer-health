@@ -45,6 +45,26 @@ export interface Customer {
   note: string;
 }
 
+/** Vorab erzeugter Bericht und Mail-Entwurf für einen gefährdeten Kunden (data/ai-texts.json) */
+export interface AiText {
+  report: {
+    /** 3 bis 5 Sätze */
+    summary: string;
+    /** 2 bis 3 Empfehlungen */
+    recommendations: string[];
+  };
+  email: {
+    subject: string;
+    body: string;
+  };
+}
+
+export interface AiTextData {
+  generatedAt: string;
+  source: string;
+  texts: Record<string, AiText>;
+}
+
 export interface CustomerData {
   /** Stichtag der Daten (ISO-Datum) */
   asOf: string;

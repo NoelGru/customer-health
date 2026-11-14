@@ -123,3 +123,32 @@ Klein anfangen: eine Woche lang im Team-Weekly gemeinsam die roten Kunden durchg
 
 **3. Wie gehst du in ein Gespräch mit einem gefährdeten Kunden?**
 Vorbereitet und mit Zahlen, aber ohne Vorwurf: „Uns ist aufgefallen, dass die Zahlungsquote seit vier Wochen sinkt, und wir haben eine Vermutung.“ Dann zuhören, eine konkrete Lösung mit Datum anbieten und nach zwei Wochen nachfassen. Die Detailansicht ist genau die Vorbereitung für dieses Gespräch.
+
+---
+
+## Phase 4: KI-Texte (ohne API)
+
+### Was wurde gebaut?
+
+1. **`data/ai-texts.json`**: Für jeden der 8 gelben und roten Kunden ein Monatsbericht (5 Sätze + 3 Empfehlungen) und ein Mail-Entwurf an die Ansprechperson. Einmalig beim Bauen mit Claude geschrieben und von Hand geprüft.
+2. **Button „Bericht & Mail-Entwurf“** in der Detailansicht (Abschnitt 4, direkt nach dem nächsten Schritt): kurze Ladeanimation, dann zwei Reiter „Monatsbericht“ und „Mail-Entwurf“, Knopf „Text kopieren“, darunter der Hinweis „Text vorab mit Claude erzeugt“.
+3. **`src/lib/ai-texts.test.ts`**: ein automatisches Lektorat. Es prüft für jeden Text: richtiger Kunde, 3 bis 5 Sätze, 2 bis 3 Empfehlungen, passende Anrede (Du oder Sie, keine Mischung), keine Gedankenstriche, keine typischen Floskeln. Jetzt 42 Tests.
+
+### Warum so?
+
+* **Vorab erzeugt statt live:** keine API-Kosten, kein Schlüssel im Projekt, und die Texte sind geprüft, bevor jemand sie sieht. Für eine Demo zählt, dass der Ablauf sichtbar wird, nicht dass jede Sekunde neu generiert wird. Der Hinweis unter dem Button macht das transparent.
+* **Die Texte nutzen genau die Daten aus dem Dashboard:** Zahlen, Notiz, Tickets, Tage seit Kontakt. So passt der Bericht zu dem, was man links sieht, und die Mail hat einen konkreten Anlass statt „wollte mich mal melden“.
+* **Jede Mail macht einen konkreten Vorschlag mit Termin.** Nicht „bei Fragen melden Sie sich“, sondern „Wir stellen bis Ende nächster Woche Schilder auf. Passt Ihnen Donnerstag?“. Das ist der Unterschied zwischen reagieren und führen.
+* **Du oder Sie hängt an der Ansprechperson, nicht am Segment:** Die beiden Fitnessstudios werden geduzt, alle anderen gesiezt. Der Test stellt sicher, dass in einer Sie-Mail kein „du“ rutscht und umgekehrt.
+* **Problem beim Kunden, Lösung bei uns:** Die Mails benennen das Problem sachlich und ohne Vorwurf, und der Aufwand liegt bei uns („Ich schicke Ihnen eine Vorlage, die Sie nur weiterleiten müssen“).
+
+### Drei typische Fragen
+
+**1. Wie nutzt du KI im Customer Success, ohne dass es unpersönlich wird?**
+Als ersten Entwurf, nie als fertige Nachricht. Die KI fasst Zahlen und Notizen zusammen und spart mir die leere Seite. Ich prüfe jede Aussage, ergänze, was nur ich weiß, und schicke die Mail unter meinem Namen. Die Verantwortung bleibt bei mir.
+
+**2. Wie schreibst du einem Kunden, dass etwas nicht gut läuft?**
+Mit einer konkreten Beobachtung, einer Vermutung zur Ursache und einem Vorschlag, der dem Kunden Arbeit abnimmt. Zum Beispiel: „Die Zahlungsquote ist von 92 auf 73 % gefallen, wir vermuten den Bauzaun, wir stellen bis Freitag zusätzliche Schilder auf.“ Kein Schuldzuweisen, kein Fachjargon.
+
+**3. Was wäre der nächste Schritt, um das live zu betreiben?**
+Die Texte mit der Claude API erzeugen, wenn ein Kunde gelb oder rot wird, mit Tageslimit für die Kosten und den vorab erzeugten Texten als Rückfall, falls die API nicht erreichbar ist. Die Mail landet nie automatisch beim Kunden, sondern immer als Entwurf bei der zuständigen Person.

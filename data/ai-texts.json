@@ -1,0 +1,118 @@
+{
+  "generatedAt": "2026-11-09",
+  "source": "Einmalig beim Bauen mit Claude erzeugt und von Hand geprüft. Keine Live-Anbindung, kein API-Schlüssel.",
+  "texts": {
+    "c07": {
+      "report": {
+        "summary": "Die Zahlungsquote am Kreisklinikum Ammertal ist seit Mitte Oktober jede Woche gesunken, von 92 % auf zuletzt 73 %. Die Auslastung liegt unverändert bei rund 87 %, die Fläche wird also genauso genutzt wie vorher, nur zahlen weniger Parkende. Zeitlich passt das zum Bauzaun am Haupteingang, hinter dem der Automat seit Oktober kaum zu sehen ist. Dazu kommen drei offene Tickets und seit 52 Tagen kein direkter Kontakt mit Frau Reiter. Wenn wir jetzt nicht handeln, landet der Ärger bei Patienten und Besuchern und damit bei der Klinik.",
+        "recommendations": [
+          "Diese Woche vor Ort prüfen, wie sichtbar Automat und Schilder hinter dem Bauzaun sind, und an der Zufahrt zusätzliche Schilder mit QR-Code aufstellen.",
+          "Frau Reiter direkt anrufen statt weiter auf den Rückruf zu warten und Befund und Lösung in einem Termin vorstellen.",
+          "Die drei offenen Tickets vor dem Termin klären, damit das Gespräch nicht mit Altlasten beginnt."
+        ]
+      },
+      "email": {
+        "subject": "Parkplatz am Haupteingang: weniger Zahlungen seit dem Bauzaun",
+        "body": "Sehr geehrte Frau Reiter,\n\nseit Mitte Oktober bezahlen auf Ihrem Besucherparkplatz deutlich weniger Parkende: Die Zahlungsquote ist in vier Wochen von 92 % auf 73 % gefallen. Die Zahl der Parkvorgänge ist dabei gleich geblieben. Wir vermuten deshalb den Bauzaun am Haupteingang als Ursache, weil der Automat dahinter kaum noch zu sehen ist.\n\nUnser Vorschlag: Wir stellen bis Ende nächster Woche zusätzliche Schilder mit QR-Code an der Zufahrt auf. So können Parkende auch ohne Automat bequem per Handy bezahlen, und Ihre Patientinnen, Patienten und Besucher bekommen keine unnötigen Zahlungserinnerungen.\n\nHätten Sie am Donnerstag oder Freitag 20 Minuten Zeit, damit wir das kurz abstimmen? Dabei gebe ich Ihnen auch den Stand zu Ihren drei offenen Anfragen.\n\nViele Grüße\nNoel Gruber\nCustomer Success"
+      }
+    },
+    "c03": {
+      "report": {
+        "summary": "Im Einkaufspark Nordtor ist die Auslastung seit Mitte Oktober von 71 % auf 55 % gefallen, die Fläche ist also fast ein Viertel leerer als vorher. Gleichzeitig sind sieben Tickets offen, die meisten davon Beschwerden von Parkenden über Vertragsstrafen. Beides fällt zeitlich mit der Baustelle an der Zufahrt Nord zusammen, die seit Ende September läuft. Die Zahlungsquote liegt mit 84 % knapp unter dem Ziel. Der Draht zu Herrn Hartung ist gut, das letzte Gespräch war vor 12 Tagen.",
+        "recommendations": [
+          "Mit Herrn Hartung klären, wie lange die Baustelle noch dauert und wie die Zufahrt Süd besser ausgeschildert werden kann.",
+          "Die sieben Tickets mit dem Support durchgehen und Strafen, die eindeutig durch die Baustelle entstanden sind, aus Kulanz stornieren.",
+          "Für die Dauer der Baustelle Hinweisschilder entlang der Umleitung aufstellen, damit Parkende die Regeln weiterhin sehen."
+        ]
+      },
+      "email": {
+        "subject": "Baustelle Zufahrt Nord: Vorschlag für die nächsten Wochen",
+        "body": "Sehr geehrter Herr Hartung,\n\nseit die Zufahrt Nord gesperrt ist, sehen wir zwei Entwicklungen auf Ihrer Fläche: Die Auslastung ist von 71 % auf 55 % gesunken, und bei uns sind sieben Beschwerden von Parkenden zu Vertragsstrafen eingegangen.\n\nWir möchten verhindern, dass die Baustelle für Ihre Besucher zusätzlich zu Ärger mit dem Parksystem führt. Deshalb schlagen wir drei Dinge vor: zusätzliche Hinweisschilder entlang der Umleitung, eine Kulanzlösung für Strafen, die eindeutig mit der Baustelle zusammenhängen, und eine kurze Abstimmung, wie lange die Sperrung noch dauert.\n\nPasst Ihnen ein Termin vor Ort in der kommenden Woche? Ich bringe die Auswertung der letzten acht Wochen mit.\n\nViele Grüße\nNoel Gruber\nCustomer Success"
+      }
+    },
+    "c10": {
+      "report": {
+        "summary": "Die Athletikhalle Nord steckt seit 49 Tagen in der Installation, geplant war der Start am 19. Oktober. Kameras und Standortbegehung sind erledigt, offen sind die Beschilderung und der Zahlungsautomat. Beides hängt an Dritten: Der Vermieter muss die Schilder an der Fassade freigeben, und für den Automaten fehlt noch der Stromanschluss. Seit 34 Tagen gab es keinen direkten Kontakt, außerdem sind drei Tickets offen. Je länger sich der Start zieht, desto größer wird der Frust bei einem Kunden, der bisher nur Aufwand und noch keinen Nutzen hat.",
+        "recommendations": [
+          "Chris eine fertige Vorlage für die Freigabe der Schilder schicken, die er nur noch an den Vermieter weiterleiten muss.",
+          "Nicht auf den Stromanschluss warten, sondern mit QR-Code-Schildern starten und den Automaten später nachrüsten.",
+          "Mit Chris ein neues, realistisches Startdatum festlegen und bis dahin jede Woche kurz den Stand teilen."
+        ]
+      },
+      "email": {
+        "subject": "Euer Parkplatz: so kommen wir schneller an den Start",
+        "body": "Hallo Chris,\n\neuer Parkplatz ist fast startklar: Die Kameras hängen, die Begehung ist erledigt. Offen sind noch zwei Punkte, die beide nicht bei dir liegen. Die Schilder an der Fassade brauchen noch die Freigabe vom Vermieter, und für den Automaten fehlt der Stromanschluss.\n\nMein Vorschlag, damit ihr nicht länger wartet: Wir starten erst mal mit QR-Code-Schildern, dann können Parkende direkt per Handy bezahlen. Den Automaten rüsten wir nach, sobald der Strom da ist. Für den Vermieter schicke ich dir eine kurze Vorlage, die du nur noch weiterleiten musst.\n\nHast du diese Woche 15 Minuten für einen Anruf? Dann legen wir ein neues Startdatum fest, und ich schaue mir auch deine drei offenen Anfragen an.\n\nViele Grüße\nNoel"
+      }
+    },
+    "c06": {
+      "report": {
+        "summary": "Die Zahlungsquote im Frischekontor Hanse ist vier Wochen in Folge gesunken, von 93 % auf 86 %. Noch liegt sie über dem Ziel von 85 %, der Trend zeigt aber klar nach unten. Die Auslastung ist mit rund 68 % stabil. Eine wahrscheinliche Ursache steht in der letzten Notiz: Seit dem Umbau im Eingangsbereich hängt der Hinweis zum Bezahlen nicht mehr an der Kasse. Mit Herrn Meiners gab es seit 38 Tagen keinen Kontakt.",
+        "recommendations": [
+          "Herrn Meiners neue Hinweisaufsteller für den Kassenbereich anbieten und bei Bedarf vorbeibringen.",
+          "Die Zahlungsquote zwei Wochen nach der Änderung erneut prüfen.",
+          "Mit Herrn Meiners einen festen Check-in alle vier Wochen vereinbaren."
+        ]
+      },
+      "email": {
+        "subject": "Hinweis zum Bezahlen an Ihrer Kasse",
+        "body": "Sehr geehrter Herr Meiners,\n\nauf Ihrem Parkplatz bezahlen seit einigen Wochen etwas weniger Parkende: Die Zahlungsquote ist von 93 % auf 86 % gesunken. Das ist noch kein großes Problem, wir möchten aber früh gegensteuern, bevor Ihre Kundschaft Zahlungserinnerungen bekommt.\n\nUns ist aufgefallen, dass seit dem Umbau im Eingangsbereich der Hinweis zum Bezahlen an der Kasse fehlt. Wir würden Ihnen gern zwei neue Aufsteller schicken, die zum neuen Eingangsbereich passen. Für Sie entstehen dabei keine Kosten.\n\nIst das für Sie in Ordnung? Dann melde ich mich Anfang nächster Woche, um die Lieferung abzustimmen.\n\nViele Grüße\nNoel Gruber\nCustomer Success"
+      }
+    },
+    "c18": {
+      "report": {
+        "summary": "Die Klinik Westpark läuft im Betrieb stabil, mit einer Zahlungsquote von rund 90 % und einer Auslastung von rund 88 %. Auffällig sind vier offene Tickets, alle zu Fahrzeugen von Rettungsdienst und Lieferanten auf dem Besucherparkplatz. Diese Fahrzeuge stehen offenbar nicht auf der Ausnahmeliste, die Klärung mit der Haustechnik ist noch offen. Seit 36 Tagen gab es keinen Kontakt mit Herrn Brandt. Für eine Klinik ist das Thema heikel, weil eine Zahlungsaufforderung an einen Rettungswagen schnell zur Beschwerde auf Leitungsebene wird.",
+        "recommendations": [
+          "Mit der Haustechnik eine vollständige Liste der Kennzeichen von Rettungsdienst und Lieferanten erstellen und hinterlegen.",
+          "Die bisherigen Forderungen an diese Fahrzeuge stornieren.",
+          "Herrn Brandt nach der Klärung kurz informieren und einen Check-in im Januar vereinbaren."
+        ]
+      },
+      "email": {
+        "subject": "Rettungsdienst und Lieferanten auf dem Besucherparkplatz",
+        "body": "Sehr geehrter Herr Brandt,\n\nauf Ihrem Besucherparkplatz läuft der Betrieb stabil. Ein Thema möchten wir aber schnell lösen: In den letzten Wochen haben Fahrzeuge von Rettungsdienst und Lieferanten Zahlungsaufforderungen bekommen, weil ihre Kennzeichen nicht auf der Ausnahmeliste stehen. Dazu liegen uns vier Anfragen vor.\n\nDiese Forderungen stornieren wir. Damit es nicht wieder vorkommt, brauchen wir eine aktuelle Liste der betroffenen Kennzeichen. Können Sie mir eine Ansprechperson in der Haustechnik nennen? Dann kläre ich das direkt dort, und für Sie entsteht kein weiterer Aufwand.\n\nViele Grüße\nNoel Gruber\nCustomer Success"
+      }
+    },
+    "c14": {
+      "report": {
+        "summary": "Das Gesundheitszentrum Stadtpark ist seit 28 Tagen im Testbetrieb, der Start war für den 26. Oktober geplant. Technisch ist alles bereit, Kennzeichenerkennung und Testzahlungen funktionieren. Es fehlt die Ausnahmeliste für Mitarbeitende, weil der Betriebsrat der Erfassung der Kennzeichen noch zustimmen muss. Danach steht nur noch die Einweisung des Teams aus. Der Kontakt zu Herrn Engel ist gut, das letzte Gespräch war vor 18 Tagen.",
+        "recommendations": [
+          "Herrn Engel ein kurzes Datenschutz-Infoblatt für den Betriebsrat schicken: welche Daten gespeichert werden, wie lange und wofür.",
+          "Anbieten, bei der nächsten Betriebsratssitzung dabei zu sein und Fragen direkt zu beantworten.",
+          "Die Einweisung des Teams schon jetzt terminieren, damit es nach der Freigabe sofort losgehen kann."
+        ]
+      },
+      "email": {
+        "subject": "Ausnahmeliste: Unterlagen für Ihren Betriebsrat",
+        "body": "Sehr geehrter Herr Engel,\n\ntechnisch ist Ihr Parkplatz startklar: Die Kennzeichenerkennung läuft zuverlässig, und die Testzahlungen haben funktioniert. Offen ist nur noch die Ausnahmeliste für Ihre Mitarbeitenden, für die die Zustimmung des Betriebsrats aussteht.\n\nDamit das schneller geht, schicke ich Ihnen bis Mittwoch ein kurzes Infoblatt für den Betriebsrat. Darin steht, welche Daten wir speichern, wie lange und wofür. Wenn es hilft, komme ich auch zur nächsten Sitzung dazu und beantworte Fragen direkt.\n\nParallel würde ich schon einen Termin für die Einweisung Ihres Teams festlegen, damit wir nach der Freigabe ohne Verzögerung starten. Welche Tage passen Ihnen in den nächsten zwei Wochen?\n\nViele Grüße\nNoel Gruber\nCustomer Success"
+      }
+    },
+    "c12": {
+      "report": {
+        "summary": "Das Hotel Seeterrasse läuft im Betrieb gut, die Zahlungsquote liegt stabil bei rund 95 %. Die Auslastung ist leicht von 55 % auf 50 % zurückgegangen, was zum Saisonende am Bodensee passt. Das eigentliche Thema ist die Beziehung: Seit 71 Tagen gab es keinen Kontakt, und das Review-Gespräch nach dem Go-live wurde zweimal verschoben und hat nie stattgefunden. Zwei Tickets sind offen. Einen zufriedenen, aber stillen Kunden kann man bei der nächsten Vertragsverlängerung kaum einschätzen.",
+        "recommendations": [
+          "Das Review nicht wieder als großen Termin anbieten, sondern als 20-Minuten-Gespräch mit einer vorab geschickten Auswertung.",
+          "Im Gespräch die Wintermonate ansprechen: ob sich Regeln für Hotelgäste oder Veranstaltungen ändern sollen.",
+          "Die zwei offenen Tickets vor dem Gespräch schließen."
+        ]
+      },
+      "email": {
+        "subject": "Kurze Auswertung für Ihren Parkplatz",
+        "body": "Sehr geehrte Frau Eberle,\n\nwir haben länger nicht gesprochen, deshalb ein kurzer Stand zu Ihrem Parkplatz: Die Zahlungsquote liegt stabil bei 95 %, das ist einer der besten Werte unter unseren Kunden. Die Auslastung ist zum Saisonende leicht auf 50 % gesunken.\n\nUnser gemeinsames Review hat bisher nicht geklappt. Ich würde es gern nachholen, aber kompakt: 20 Minuten am Telefon, die Auswertung schicke ich Ihnen vorher. Dabei können wir auch klären, ob für die Wintermonate andere Regeln für Ihre Hotelgäste sinnvoll sind.\n\nPasst Ihnen Dienstag oder Mittwoch nächster Woche, jeweils am Vormittag?\n\nViele Grüße\nNoel Gruber\nCustomer Success"
+      }
+    },
+    "c15": {
+      "report": {
+        "summary": "Im Studio Puls ist die Auslastung des Parkplatzes seit Mitte Oktober von 65 % auf 53 % gefallen. Die Zahlungsquote ist mit rund 92 % unverändert gut, das System funktioniert also. Der Grund liegt vermutlich außerhalb: Zwei Straßen weiter hat ein neues Studio mit kostenlosem Parkplatz eröffnet. Im schlimmsten Fall wandern Mitglieder ab, und der eigene Parkplatz wird als Nachteil gesehen. Der Kontakt zu Kim ist gut, das letzte Gespräch war vor 14 Tagen.",
+        "recommendations": [
+          "Mit Kim besprechen, ob die kostenlose Parkzeit für Mitglieder verlängert werden soll, damit der Parkplatz ein klarer Vorteil bleibt.",
+          "Die Auslastung nach Uhrzeit auswerten: Fehlen eher Mitglieder am Abend oder Laufkundschaft tagsüber?",
+          "Nach vier Wochen gemeinsam prüfen, ob die Änderung wirkt."
+        ]
+      },
+      "email": {
+        "subject": "Euer Parkplatz und das neue Studio um die Ecke",
+        "body": "Hallo Kim,\n\nmir ist aufgefallen, dass auf eurem Parkplatz seit Mitte Oktober weniger los ist: Die Auslastung ist von 65 % auf 53 % gesunken. Technisch läuft alles, die Zahlungsquote ist genauso gut wie vorher. Ich vermute, dass das neue Studio zwei Straßen weiter mit seinem Gratis-Parkplatz eine Rolle spielt.\n\nIch hätte zwei Ideen. Wir könnten die kostenlose Parkzeit für eure Mitglieder verlängern, damit der Parkplatz für sie ein klarer Vorteil bleibt. Und ich werte aus, zu welchen Uhrzeiten genau weniger geparkt wird. Dann siehst du, ob eher Mitglieder fehlen oder Laufkundschaft.\n\nWollen wir nächste Woche kurz telefonieren? Die Auswertung bringe ich mit.\n\nViele Grüße\nNoel"
+      }
+    }
+  }
+}

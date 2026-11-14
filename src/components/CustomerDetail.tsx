@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { formatDate } from "../lib/format";
 import { SEGMENT_LABEL, type CustomerView } from "../lib/view";
+import { AiReport, hasAiText } from "./AiReport";
 import { ReadinessChecklist } from "./ReadinessChecklist";
 import { ScoreRing, StatusChip } from "./ScoreBadge";
 import { TrendChart } from "./TrendChart";
@@ -38,6 +39,7 @@ interface Props {
 export function CustomerDetail({ v, asOf, onClose }: Props) {
   const isLive = v.onboarding.phase === "live";
   const overdue = !isLive && v.goLiveDate < asOf; // ISO-Daten lassen sich als Text vergleichen
+  const withAi = hasAiText(v.id); // nur gelbe und rote Kunden haben Bericht und Mail
 
   return (
     <article className="glass p-[18px] sm:p-6" aria-labelledby="detail-title">
@@ -93,7 +95,13 @@ export function CustomerDetail({ v, asOf, onClose }: Props) {
         </div>
       </Section>
 
-      <Section n={4} title={`Readiness · ${v.readiness.done}/${v.readiness.total}`}>
+      {withAi && (
+        <Section n={4} title="Bericht & Mail">
+          <AiReport key={v.id} v={v} asOf={asOf} />
+        </Section>
+      )}
+
+      <Section n={withAi ? 5 : 4} title={`Readiness · ${v.readiness.done}/${v.readiness.total}`}>
         <ReadinessChecklist v={v} />
       </Section>
 
