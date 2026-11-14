@@ -2,7 +2,7 @@
 
 Ein kleines, funktionierendes Dashboard für Customer Success im Bereich Paid Parking: Welche Parkflächen-Kunden brauchen gerade Aufmerksamkeit, warum, und was ist der nächste Schritt?
 
-**Live-Demo:** _wird nach dem Deployment ergänzt_
+**Live-Demo:** [customer-health-snowy.vercel.app](https://customer-health-snowy.vercel.app) · direkt zu einem gefährdeten Kunden: [Kreisklinikum Ammertal](https://customer-health-snowy.vercel.app/#/kunde/c07)
 
 > Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden.
 > Alle Kunden, Namen und Zahlen sind erfunden.

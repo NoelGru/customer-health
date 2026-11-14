@@ -152,3 +152,32 @@ Mit einer konkreten Beobachtung, einer Vermutung zur Ursache und einem Vorschlag
 
 **3. Was wäre der nächste Schritt, um das live zu betreiben?**
 Die Texte mit der Claude API erzeugen, wenn ein Kunde gelb oder rot wird, mit Tageslimit für die Kosten und den vorab erzeugten Texten als Rückfall, falls die API nicht erreichbar ist. Die Mail landet nie automatisch beim Kunden, sondern immer als Entwurf bei der zuständigen Person.
+
+---
+
+## Phase 5: Fertigstellen
+
+### Was wurde gemacht?
+
+1. **README** mit Live-Link, Screenshot, Erklärung des Health Scores und dem Abschnitt „So könnte man es live anbinden“ (Claude API mit Tageslimit und Rückfall auf die vorab erzeugten Texte, nur beschrieben).
+2. **GitHub:** öffentliches Repo `NoelGru/customer-health`. Alle Commits laufen über die GitHub-noreply-Adresse, die private E-Mail taucht nirgends auf. Vor dem Hochladen wurde das ganze Projekt nach privaten Daten und Schlüsseln durchsucht.
+3. **Vercel:** Das Projekt ist mit dem Repo verbunden. Jeder Push auf `main` baut die Seite automatisch neu. Live unter [customer-health-snowy.vercel.app](https://customer-health-snowy.vercel.app).
+4. **Video-Skript** in `docs/VIDEO-SKRIPT.md` (127 Wörter, mit Regieanweisungen).
+
+### Warum so?
+
+* **Ein Link statt einer Datei:** Wer die Bewerbung liest, klickt einmal und sieht das Tool. Keine Installation, keine Hürde.
+* **README als Gebrauchsanweisung für Fremde:** Wer nur zwei Minuten hat, versteht dort Zweck, Logik und Grenzen, ohne Code zu lesen.
+* **Automatisches Deployment:** Eine Änderung im Repo ist ein paar Sekunden später live. Kein manueller Upload, der vergessen werden kann.
+* **Ehrlich über Grenzen:** Beispieldaten, vorab erzeugte Texte und die Live-Anbindung nur als Beschreibung sind klar benannt. Das schafft mehr Vertrauen als eine Demo, die mehr verspricht, als sie kann.
+
+### Drei typische Fragen
+
+**1. Was würdest du als Erstes ändern, wenn das Tool echte Daten bekäme?**
+Die Gewichte der Regeln an der Vergangenheit prüfen: Welche Kunden haben tatsächlich gekündigt, und wie sah ihr Score vorher aus? Außerdem würde ich die Daten täglich automatisch einlesen statt aus einer Datei und den Kontakt direkt aus dem CRM ziehen.
+
+**2. Wie misst du, ob deine Customer-Success-Arbeit wirkt?**
+Mit wenigen Zahlen über Zeit: Anteil roter und gelber Kunden, Dauer vom Vertrag bis Go-live, Verlängerungsquote und wie schnell ein roter Kunde wieder grün wird. Wichtig ist der Trend, nicht der einzelne Monatswert.
+
+**3. Warum hast du das gebaut, statt einfach eine Präsentation zu machen?**
+Weil man an einem funktionierenden Prototyp sofort sieht, ob eine Idee trägt. Beim Bauen sind mir Dinge aufgefallen, die auf Folien nie aufgefallen wären, etwa dass ein einzelnes starkes Warnsignal mit der ersten Schwelle noch grün gewesen wäre.

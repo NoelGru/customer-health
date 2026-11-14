@@ -87,7 +87,7 @@
     .shimmer, .animate-fade-up { animation: none; }
   }
   .overlay-bg {
-    background: rgb(230 231 238 / 0.75);
+    background: rgb(232 233 241 / 0.97);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
