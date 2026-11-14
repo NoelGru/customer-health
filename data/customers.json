@@ -1,0 +1,1303 @@
+{
+  "asOf": "2026-11-09",
+  "customers": [
+    {
+      "id": "c01",
+      "name": "Frischemarkt Lindenhof",
+      "segment": "supermarkt",
+      "city": "Augsburg",
+      "spaces": 120,
+      "contact": {
+        "name": "Petra Hauser",
+        "role": "Filialleitung",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2025-03-10",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2025-03-10",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.66,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.68,
+          "paymentRate": 0.95
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.65,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.67,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.69,
+          "paymentRate": 0.95
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.66,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.68,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.7,
+          "paymentRate": 0.95
+        }
+      ],
+      "openTickets": 0,
+      "daysSinceContact": 12,
+      "note": "Quartals-Review im Oktober, Filialleitung zufrieden. Wunsch: Auswertung der Parkdauer für die Weihnachtszeit."
+    },
+    {
+      "id": "c02",
+      "name": "Rehaklinik Sonnenhang",
+      "segment": "klinik",
+      "city": "Bad Tölz",
+      "spaces": 260,
+      "contact": {
+        "name": "Markus Brandl",
+        "role": "Leitung Facility Management",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2024-11-04",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2024-11-04",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.86,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.88,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.85,
+          "paymentRate": 0.9
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.87,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.86,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.89,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.87,
+          "paymentRate": 0.9
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.88,
+          "paymentRate": 0.92
+        }
+      ],
+      "openTickets": 1,
+      "daysSinceContact": 20,
+      "note": "Besucherparkplatz läuft stabil. Klinik fragt nach reservierten Kurzzeitplätzen für Dialysepatienten."
+    },
+    {
+      "id": "c03",
+      "name": "Einkaufspark Nordtor",
+      "segment": "shopping",
+      "city": "Kassel",
+      "spaces": 620,
+      "contact": {
+        "name": "Michael Hartung",
+        "role": "Center-Manager",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2024-04-08",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2024-04-08",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.71,
+          "paymentRate": 0.87
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.73,
+          "paymentRate": 0.88
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.7,
+          "paymentRate": 0.86
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.72,
+          "paymentRate": 0.87
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.66,
+          "paymentRate": 0.86
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.61,
+          "paymentRate": 0.85
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.56,
+          "paymentRate": 0.84
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.54,
+          "paymentRate": 0.84
+        }
+      ],
+      "openTickets": 7,
+      "daysSinceContact": 12,
+      "note": "Seit Ende September Baustelle an der Zufahrt Nord. Mehrere Beschwerden von Parkenden über Vertragsstrafen."
+    },
+    {
+      "id": "c04",
+      "name": "Parkhotel Lindenau",
+      "segment": "hotel",
+      "city": "Regensburg",
+      "spaces": 80,
+      "contact": {
+        "name": "Julia Wendt",
+        "role": "Hoteldirektorin",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2025-06-02",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2025-06-02",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.58,
+          "paymentRate": 0.95
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.61,
+          "paymentRate": 0.96
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.55,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.6,
+          "paymentRate": 0.95
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.57,
+          "paymentRate": 0.96
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.59,
+          "paymentRate": 0.95
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.62,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.56,
+          "paymentRate": 0.96
+        }
+      ],
+      "openTickets": 0,
+      "daysSinceContact": 33,
+      "note": "Läuft ohne Auffälligkeiten. Letztes Gespräch Anfang Oktober, kein offenes Thema."
+    },
+    {
+      "id": "c05",
+      "name": "FitWerk Ost",
+      "segment": "fitness",
+      "city": "Leipzig",
+      "spaces": 45,
+      "contact": {
+        "name": "Tobi Krämer",
+        "role": "Studioleiter",
+        "salutation": "du"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2025-09-15",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2025-09-15",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.62,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.6,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.64,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.61,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.63,
+          "paymentRate": 0.9
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.65,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.62,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.64,
+          "paymentRate": 0.92
+        }
+      ],
+      "openTickets": 3,
+      "daysSinceContact": 9,
+      "note": "Drei Tickets zu Mitgliedern, deren Kennzeichen nicht auf der Ausnahmeliste stehen."
+    },
+    {
+      "id": "c06",
+      "name": "Frischekontor Hanse",
+      "segment": "supermarkt",
+      "city": "Bremen",
+      "spaces": 110,
+      "contact": {
+        "name": "Ralf Meiners",
+        "role": "Marktleiter",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2025-05-12",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2025-05-12",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.68,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.7,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.67,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.69,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.68,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.71,
+          "paymentRate": 0.89
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.69,
+          "paymentRate": 0.88
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.67,
+          "paymentRate": 0.86
+        }
+      ],
+      "openTickets": 1,
+      "daysSinceContact": 38,
+      "note": "Nach dem Umbau im Eingangsbereich hängt der Hinweis zum Bezahlen nicht mehr an der Kasse."
+    },
+    {
+      "id": "c07",
+      "name": "Kreisklinikum Ammertal",
+      "segment": "klinik",
+      "city": "Weilheim",
+      "spaces": 280,
+      "contact": {
+        "name": "Claudia Reiter",
+        "role": "Verwaltungsleitung",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2024-10-07",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2024-10-07",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.87,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.88,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.86,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.87,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.88,
+          "paymentRate": 0.89
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.86,
+          "paymentRate": 0.84
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.87,
+          "paymentRate": 0.79
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.85,
+          "paymentRate": 0.73
+        }
+      ],
+      "openTickets": 3,
+      "daysSinceContact": 52,
+      "note": "Seit Oktober Bauzaun am Haupteingang, der Automat ist schwer zu finden. Ansprechpartnerin war im Urlaub, Rückruf steht aus."
+    },
+    {
+      "id": "c08",
+      "name": "Einkaufszentrum Isarbogen",
+      "segment": "shopping",
+      "city": "Landshut",
+      "spaces": 540,
+      "contact": {
+        "name": "Sabine Roth",
+        "role": "Center-Managerin",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2024-05-06",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2024-05-06",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.72,
+          "paymentRate": 0.9
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.74,
+          "paymentRate": 0.89
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.71,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.73,
+          "paymentRate": 0.9
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.75,
+          "paymentRate": 0.9
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.72,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.74,
+          "paymentRate": 0.89
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.76,
+          "paymentRate": 0.9
+        }
+      ],
+      "openTickets": 2,
+      "daysSinceContact": 15,
+      "note": "Stabil. Center-Management plant Ladesäulen und fragt, ob sich das mit dem Parksystem verbinden lässt."
+    },
+    {
+      "id": "c09",
+      "name": "Landhotel Am Mühlbach",
+      "segment": "hotel",
+      "city": "Rosenheim",
+      "spaces": 40,
+      "contact": {
+        "name": "Florian Huber",
+        "role": "Inhaber",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "vertrag",
+        "phaseSince": "2026-10-30",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact"
+        ]
+      },
+      "goLiveDate": "2027-01-11",
+      "weekly": [],
+      "openTickets": 0,
+      "daysSinceContact": 4,
+      "note": "Vertrag Ende Oktober unterschrieben. Parkregeln für Hotelgäste werden noch abgestimmt."
+    },
+    {
+      "id": "c10",
+      "name": "Athletikhalle Nord",
+      "segment": "fitness",
+      "city": "Hamburg",
+      "spaces": 40,
+      "contact": {
+        "name": "Chris Nowak",
+        "role": "Inhaber",
+        "salutation": "du"
+      },
+      "onboarding": {
+        "phase": "installation",
+        "phaseSince": "2026-09-21",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras"
+        ]
+      },
+      "goLiveDate": "2026-10-19",
+      "weekly": [],
+      "openTickets": 3,
+      "daysSinceContact": 34,
+      "note": "Vermieter muss die Schilder an der Fassade noch freigeben. Zahlungsautomat wartet auf den Stromanschluss."
+    },
+    {
+      "id": "c11",
+      "name": "Bio-Markt Grünzeit",
+      "segment": "supermarkt",
+      "city": "Freiburg",
+      "spaces": 60,
+      "contact": {
+        "name": "Anna Kessler",
+        "role": "Inhaberin",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2025-01-13",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2025-01-13",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.64,
+          "paymentRate": 0.86
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.62,
+          "paymentRate": 0.85
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.65,
+          "paymentRate": 0.87
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.63,
+          "paymentRate": 0.86
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.66,
+          "paymentRate": 0.85
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.64,
+          "paymentRate": 0.86
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.62,
+          "paymentRate": 0.85
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.65,
+          "paymentRate": 0.84
+        }
+      ],
+      "openTickets": 0,
+      "daysSinceContact": 25,
+      "note": "Kleine Fläche, viele Stammkunden. Zahlungsquote seit dem Start knapp unter Ziel, aber stabil."
+    },
+    {
+      "id": "c12",
+      "name": "Hotel Seeterrasse",
+      "segment": "hotel",
+      "city": "Konstanz",
+      "spaces": 90,
+      "contact": {
+        "name": "Martina Eberle",
+        "role": "Geschäftsführerin",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2025-08-04",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced"
+        ]
+      },
+      "goLiveDate": "2025-08-04",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.55,
+          "paymentRate": 0.95
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.57,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.52,
+          "paymentRate": 0.95
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.54,
+          "paymentRate": 0.96
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.5,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.53,
+          "paymentRate": 0.95
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.51,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.49,
+          "paymentRate": 0.95
+        }
+      ],
+      "openTickets": 2,
+      "daysSinceContact": 71,
+      "note": "Letzter Kontakt im Spätsommer. Das Review-Gespräch nach dem Go-live wurde zweimal verschoben."
+    },
+    {
+      "id": "c13",
+      "name": "Markthalle Süd",
+      "segment": "supermarkt",
+      "city": "Nürnberg",
+      "spaces": 150,
+      "contact": {
+        "name": "Stefan Ott",
+        "role": "Filialleitung",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2025-04-07",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2025-04-07",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.7,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.72,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.69,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.71,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.73,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.7,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.72,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.74,
+          "paymentRate": 0.94
+        }
+      ],
+      "openTickets": 1,
+      "daysSinceContact": 18,
+      "note": "Läuft gut. Filialleitung hat uns an eine Schwesterfiliale weiterempfohlen."
+    },
+    {
+      "id": "c14",
+      "name": "Gesundheitszentrum Stadtpark",
+      "segment": "klinik",
+      "city": "Ulm",
+      "spaces": 140,
+      "contact": {
+        "name": "Thomas Engel",
+        "role": "Technischer Leiter",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "testbetrieb",
+        "phaseSince": "2026-10-12",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments"
+        ]
+      },
+      "goLiveDate": "2026-10-26",
+      "weekly": [],
+      "openTickets": 1,
+      "daysSinceContact": 18,
+      "note": "Ausnahmeliste für Mitarbeitende fehlt noch, die Freigabe durch den Betriebsrat steht aus."
+    },
+    {
+      "id": "c15",
+      "name": "Studio Puls",
+      "segment": "fitness",
+      "city": "Mannheim",
+      "spaces": 50,
+      "contact": {
+        "name": "Kim Albers",
+        "role": "Studioleitung",
+        "salutation": "du"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2025-03-03",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2025-03-03",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.64,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.66,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.63,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.65,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.6,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.57,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.53,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.52,
+          "paymentRate": 0.91
+        }
+      ],
+      "openTickets": 1,
+      "daysSinceContact": 14,
+      "note": "Zwei Straßen weiter hat ein neues Studio mit kostenlosem Parkplatz eröffnet."
+    },
+    {
+      "id": "c16",
+      "name": "Stadthotel Kranich",
+      "segment": "hotel",
+      "city": "Würzburg",
+      "spaces": 55,
+      "contact": {
+        "name": "Lena Vogt",
+        "role": "Front Office Managerin",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2025-07-14",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2025-07-14",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.52,
+          "paymentRate": 0.96
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.55,
+          "paymentRate": 0.97
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.5,
+          "paymentRate": 0.95
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.53,
+          "paymentRate": 0.96
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.49,
+          "paymentRate": 0.96
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.51,
+          "paymentRate": 0.95
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.47,
+          "paymentRate": 0.97
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.48,
+          "paymentRate": 0.96
+        }
+      ],
+      "openTickets": 0,
+      "daysSinceContact": 22,
+      "note": "Hotelgäste werden über die Rezeption freigeschaltet. Keine offenen Themen."
+    },
+    {
+      "id": "c17",
+      "name": "Quartiersmarkt Eichenau",
+      "segment": "supermarkt",
+      "city": "Hannover",
+      "spaces": 90,
+      "contact": {
+        "name": "Deniz Yilmaz",
+        "role": "Marktleiter",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "installation",
+        "phaseSince": "2026-10-28",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras"
+        ]
+      },
+      "goLiveDate": "2026-12-07",
+      "weekly": [],
+      "openTickets": 0,
+      "daysSinceContact": 6,
+      "note": "Kameras montiert. Schilder sind bestellt, Lieferung nächste Woche."
+    },
+    {
+      "id": "c18",
+      "name": "Klinik Westpark",
+      "segment": "klinik",
+      "city": "Düsseldorf",
+      "spaces": 320,
+      "contact": {
+        "name": "Holger Brandt",
+        "role": "Leitung Patientenservice",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2024-09-02",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2024-09-02",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.88,
+          "paymentRate": 0.9
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.89,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.87,
+          "paymentRate": 0.89
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.88,
+          "paymentRate": 0.9
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.89,
+          "paymentRate": 0.9
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.88,
+          "paymentRate": 0.89
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.9,
+          "paymentRate": 0.91
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.89,
+          "paymentRate": 0.9
+        }
+      ],
+      "openTickets": 4,
+      "daysSinceContact": 36,
+      "note": "Vier Tickets zu Rettungsdienst und Lieferanten auf dem Besucherparkplatz. Klärung mit der Haustechnik offen."
+    },
+    {
+      "id": "c19",
+      "name": "Kraftraum 24",
+      "segment": "fitness",
+      "city": "Salzburg",
+      "spaces": 70,
+      "contact": {
+        "name": "Jonas Pichler",
+        "role": "Inhaber",
+        "salutation": "du"
+      },
+      "onboarding": {
+        "phase": "live",
+        "phaseSince": "2025-02-03",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition",
+          "test-payments",
+          "test-exceptions",
+          "test-training",
+          "live-announced",
+          "live-review30"
+        ]
+      },
+      "goLiveDate": "2025-02-03",
+      "weekly": [
+        {
+          "week": "2026-09-14",
+          "occupancy": 0.57,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-09-21",
+          "occupancy": 0.59,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-09-28",
+          "occupancy": 0.56,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-10-05",
+          "occupancy": 0.58,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-10-12",
+          "occupancy": 0.6,
+          "paymentRate": 0.94
+        },
+        {
+          "week": "2026-10-19",
+          "occupancy": 0.57,
+          "paymentRate": 0.93
+        },
+        {
+          "week": "2026-10-26",
+          "occupancy": 0.59,
+          "paymentRate": 0.92
+        },
+        {
+          "week": "2026-11-02",
+          "occupancy": 0.61,
+          "paymentRate": 0.94
+        }
+      ],
+      "openTickets": 1,
+      "daysSinceContact": 27,
+      "note": "Mitglieder parken zwei Stunden frei. Inhaber sehr zufrieden, fragt nach einem zweiten Standort."
+    },
+    {
+      "id": "c20",
+      "name": "Fachmarktzentrum Lechfeld",
+      "segment": "shopping",
+      "city": "Königsbrunn",
+      "spaces": 310,
+      "contact": {
+        "name": "Nadine Schmid",
+        "role": "Objektmanagerin",
+        "salutation": "sie"
+      },
+      "onboarding": {
+        "phase": "testbetrieb",
+        "phaseSince": "2026-11-01",
+        "done": [
+          "vertrag-signed",
+          "vertrag-contact",
+          "vertrag-rules",
+          "install-survey",
+          "install-cameras",
+          "install-signs",
+          "install-payment",
+          "test-recognition"
+        ]
+      },
+      "goLiveDate": "2026-11-23",
+      "weekly": [],
+      "openTickets": 1,
+      "daysSinceContact": 3,
+      "note": "Testbetrieb seit 1. November, Erkennungsrate bei 99 %. Testzahlungen folgen diese Woche."
+    }
+  ]
+}
