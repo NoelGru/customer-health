@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mockup C · Logbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #f3eee4; --paper-2: #ebe4d6; --card: #fbf8f2; --ink: #1d2721; --ink-2: #3d4a42; --mut: #6f6a5f;
+    --rule: #d6ccb9; --rule-2: #c4b8a1;
+    --rot: #b23a26; --gelb: #b98113; --gruen: #4c7a48; --accent: #1f3d33;
+    --serif: Fraunces, Georgia, serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: "IBM Plex Sans", system-ui, sans-serif; color: var(--ink); background: var(--paper); font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+  .mast { border-bottom: 3px double var(--ink); padding: 26px 0 14px; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .mast h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(36px, 5vw, 56px); letter-spacing: -.02em; line-height: 1; font-variation-settings: "opsz" 144; }
+  .mast h1 em { font-weight: 400; font-style: italic; color: var(--accent); }
+  .mast .date { font-family: var(--mono); font-size: 12px; color: var(--mut); text-align: right; }
+  .ticker { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--ink); }
+  .ticker > div { padding: 12px 16px 12px 0; border-right: 1px solid var(--rule); }
+  .ticker > div:last-child { border-right: 0; }
+  .ticker > div + div { padding-left: 16px; }
+  .ticker .v { font-family: var(--serif); font-size: 32px; font-weight: 600; line-height: 1.1; font-variant-numeric: lining-nums; }
+  .ticker .l { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--mut); }
+  .ticker .v.rot { color: var(--rot); }
+
+  .tabs { display: flex; gap: 22px; padding: 14px 0; border-bottom: 1px solid var(--rule); font-size: 14px; flex-wrap: wrap; }
+  .tabs a { color: var(--mut); text-decoration: none; padding-bottom: 4px; }
+  .tabs a.on { color: var(--ink); font-weight: 600; border-bottom: 2px solid var(--ink); }
+  .tabs .r { margin-left: auto; font-family: var(--mono); font-size: 12px; color: var(--mut); }
+
+  .board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 18px; border: 1px solid var(--rule-2); background: var(--paper-2); }
+  .col { padding: 14px; border-right: 1px solid var(--rule-2); min-width: 0; }
+  .col:last-child { border-right: 0; }
+  .col h2 { font-family: var(--serif); font-size: 21px; font-weight: 600; display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .col h2 .n { font-family: var(--mono); font-size: 13px; font-weight: 400; color: var(--mut); }
+  .col .desc { font-size: 13px; color: var(--mut); margin-bottom: 12px; }
+  .col.rot h2 { color: var(--rot); } .col.gelb h2 { color: var(--gelb); } .col.gruen h2 { color: var(--gruen); }
+  .stack { display: grid; gap: 8px; }
+  .k { background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--c); padding: 10px 12px; cursor: pointer; transition: transform .12s, box-shadow .12s; }
+  .k:hover { transform: translateY(-1px); box-shadow: 0 4px 0 -2px var(--rule-2); }
+  .k.sel { outline: 2px solid var(--ink); outline-offset: -1px; }
+  .k .t { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .k .nm { font-weight: 600; font-size: 14.5px; line-height: 1.3; }
+  .k .sc { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--c); line-height: 1; }
+  .k .mt { font-family: var(--mono); font-size: 11px; color: var(--mut); margin-top: 2px; }
+  .k .rs { font-size: 13px; color: var(--ink-2); margin-top: 6px; }
+  .col.gruen .k .rs { display: none; }
+  .col.gruen .k { padding: 8px 12px; }
+
+  .akte { margin: 26px 0 0; border: 1px solid var(--ink); background: var(--card); }
+  .akte-h { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 18px 22px; border-bottom: 1px solid var(--ink); flex-wrap: wrap; }
+  .akte-h .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--mut); }
+  .akte-h h3 { font-family: var(--serif); font-size: 32px; font-weight: 600; line-height: 1.1; margin-top: 4px; }
+  .stamp { font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: .1em; color: var(--c); border: 2px solid var(--c); padding: 6px 12px; transform: rotate(-3deg); display: inline-block; }
+  .stamp b { font-family: var(--serif); font-size: 26px; letter-spacing: 0; margin-right: 6px; }
+  .akte-b { display: grid; grid-template-columns: 1.2fr 1fr; }
+  .akte-b > div { padding: 18px 22px; }
+  .akte-b > div + div { border-left: 1px solid var(--rule); }
+  .h4 { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--mut); border-bottom: 1px solid var(--rule); padding-bottom: 6px; margin: 0 0 10px; }
+  .h4:not(:first-child) { margin-top: 22px; }
+  .legend { font-family: var(--mono); font-size: 11px; color: var(--mut); display: flex; gap: 16px; margin-bottom: 4px; }
+  .legend span::before { content: ""; display: inline-block; width: 16px; border-top: 2px solid var(--c); vertical-align: middle; margin-right: 6px; }
+  .legend .dash::before { border-top-style: dashed; }
+  table.why { width: 100%; border-collapse: collapse; font-size: 14px; }
+  table.why td { padding: 7px 0; border-bottom: 1px dotted var(--rule-2); vertical-align: top; }
+  table.why td.p { font-family: var(--mono); color: var(--rot); width: 48px; }
+  table.why tr.sum td { border-bottom: 0; border-top: 1px solid var(--ink); font-weight: 600; }
+  .next { font-family: var(--serif); font-size: 19px; line-height: 1.4; color: var(--accent); }
+  .next::before { content: "→ "; }
+  .ledger { list-style: none; padding: 0; font-size: 13.5px; columns: 2; column-gap: 24px; }
+  .ledger li { break-inside: avoid; padding: 3px 0; display: flex; gap: 8px; }
+  .ledger li::before { content: "☐"; font-family: var(--mono); color: var(--mut); }
+  .ledger li.done { color: var(--mut); }
+  .ledger li.done::before { content: "☑"; color: var(--gruen); }
+  .ledger .ph { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink); padding-top: 8px; }
+  .ledger .ph::before { content: ""; }
+  .memo { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--ink-2); background: #f6efd9; border-left: 3px solid var(--gelb); padding: 10px 14px; }
+  .btn { background: var(--accent); color: #f3eee4; border: 0; padding: 13px 20px; font: inherit; font-weight: 500; cursor: pointer; letter-spacing: .01em; }
+  .hint { font-family: var(--mono); font-size: 11px; color: var(--mut); margin-top: 6px; }
+  .empty { color: var(--mut); font-size: 14px; }
+  footer { border-top: 3px double var(--ink); margin-top: 32px; padding: 14px 0 34px; font-family: var(--mono); font-size: 12px; color: var(--mut); }
+
+  @media (max-width: 900px) {
+    .board { grid-template-columns: 1fr; }
+    .col { border-right: 0; border-bottom: 1px solid var(--rule-2); }
+    .akte-b { grid-template-columns: 1fr; }
+    .akte-b > div + div { border-left: 0; border-top: 1px solid var(--rule); }
+    .ticker { grid-template-columns: repeat(2, 1fr); }
+    .ticker > div:nth-child(2) { border-right: 0; }
+    .ticker > div:nth-child(3) { padding-left: 0; }
+    .ticker > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  }
+  @media (max-width: 520px) {
+    .wrap { padding: 0 16px; }
+    .mast .date { text-align: left; }
+    .ledger { columns: 1; }
+    .tabs { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; }
+    .tabs .r { display: none; }
+    .akte-h, .akte-b > div { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <h1>Kunden-<em>Logbuch</em></h1>
+    <div class="date" id="asof"></div>
+  </header>
+  <div class="ticker" id="kpis"></div>
+  <nav class="tabs">
+    <a href="#" class="on">Alle Kunden</a><a href="#">Supermarkt</a><a href="#">Klinik</a><a href="#">Hotel</a><a href="#">Fitness</a><a href="#">Shopping-Center</a>
+    <span class="r">Phase: alle ▾</span>
+  </nav>
+  <div class="board" id="board"></div>
+  <article class="akte" id="akte"></article>
+  <footer>Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden</footer>
+</div>
+
+<script type="module">
+  import { rows, kpis, detail, asOfLabel, formatPercent, checklistFor, chartFor, wireSelection, esc } from "./shared.js";
+  const C = { rot: "#b23a26", gelb: "#b98113", gruen: "#4c7a48" };
+
+  document.getElementById("asof").innerHTML = `Ausgabe vom ${asOfLabel}<br>Customer Success · Paid Parking`;
+  document.getElementById("kpis").innerHTML = `
+    <div><div class="v">${kpis.total}</div><div class="l">Kunden</div></div>
+    <div><div class="v rot">${kpis.rot}</div><div class="l">gefährdet · ${kpis.gelb} beobachten</div></div>
+    <div><div class="v">${kpis.onboarding}</div><div class="l">im Onboarding</div></div>
+    <div><div class="v">${formatPercent(kpis.avgPayment)}</div><div class="l">Ø Zahlungsquote</div></div>`;
+
+  const COLS = [
+    { s: "rot", title: "Jetzt handeln", desc: "Mehrere Warnsignale gleichzeitig. Diese Woche persönlich." },
+    { s: "gelb", title: "Diese Woche", desc: "Ein starkes oder zwei kleine Signale. Kurzer Check-in." },
+    { s: "gruen", title: "Läuft", desc: "Normaler Rhythmus, Quartals-Review." },
+  ];
+  const board = document.getElementById("board");
+  const renderBoard = (sel) => {
+    board.innerHTML = COLS.map((col) => {
+      const items = rows.filter((r) => r.health.status === col.s);
+      return `<section class="col ${col.s}"><h2>${col.title}<span class="n">${items.length}</span></h2><p class="desc">${col.desc}</p>
+        <div class="stack">${items.map((r) => `
+          <div class="k ${r.id === sel ? "sel" : ""}" style="--c:${C[r.health.status]}" data-id="${r.id}">
+            <div class="t"><span class="nm">${esc(r.name)}</span><span class="sc">${r.health.score}</span></div>
+            <div class="mt">${r.segmentLabel.toUpperCase()} · ${esc(r.city)} · ${r.phaseLabel}</div>
+            ${r.health.reasons[0] ? `<div class="rs">${esc(r.health.reasons[0].text)}</div>` : ""}
+          </div>`).join("")}</div></section>`;
+    }).join("");
+  };
+
+  const renderAkte = (r) => {
+    const chart = chartFor(r, { payment: "#1d2721", occupancy: "#b98113", dash: "4 4" }, { grid: "#e2d9c7", label: "#6f6a5f", font: "IBM Plex Mono, monospace", stroke: 2, dots: true });
+    const phases = checklistFor(r);
+    const total = r.health.reasons.reduce((s, x) => s + x.points, 0);
+    document.getElementById("akte").innerHTML = `
+      <div class="akte-h">
+        <div><div class="kicker">Akte ${r.id.toUpperCase()} · ${r.segmentLabel} · ${esc(r.city)} · ${r.spaces} Stellplätze · seit ${new Date(r.goLiveDate).toLocaleDateString("de-DE", { month: "long", year: "numeric" })}</div><h3>${esc(r.name)}</h3></div>
+        <span class="stamp" style="--c:${C[r.health.status]}"><b>${r.health.score}</b>${{ rot: "gefährdet", gelb: "beobachten", gruen: "stabil" }[r.health.status]}</span>
+      </div>
+      <div class="akte-b">
+        <div>
+          <p class="h4">Verlauf der letzten 8 Wochen</p>
+          ${chart ? `<div class="legend"><span style="--c:#1d2721">Zahlungsquote</span><span class="dash" style="--c:#b98113">Auslastung</span></div>${chart}` : `<p class="empty">Noch keine Betriebsdaten, der Kunde ist im Onboarding.</p>`}
+          <p class="h4">Rechnung</p>
+          <table class="why"><tr><td class="p">100</td><td>Startwert</td></tr>
+            ${r.health.reasons.map((x) => `<tr><td class="p">${x.points}</td><td>${esc(x.text)}</td></tr>`).join("")}
+            <tr class="sum"><td class="p" style="color:var(--ink)">${100 + total}</td><td>Health Score</td></tr></table>
+          <p class="h4">Letzte Notiz</p><p class="memo">${esc(r.note)}</p>
+        </div>
+        <div>
+          <p class="h4">Empfohlener nächster Schritt</p><p class="next">${esc(r.health.nextStep)}</p>
+          <p class="h4">Readiness · ${r.readiness.done} von ${r.readiness.total}</p>
+          <ul class="ledger">${phases.map((p) => `<li class="ph">${p.label}${p.current ? " ← aktuell" : ""}</li>${p.items.map((i) => `<li class="${i.done ? "done" : ""}">${esc(i.label)}</li>`).join("")}`).join("")}</ul>
+          ${r.health.status !== "gruen" ? `<p class="h4">Kommunikation</p><button class="btn">Bericht &amp; Mail-Entwurf öffnen</button><p class="hint">Text vorab mit Claude erzeugt</p>` : ""}
+        </div>
+      </div>`;
+  };
+
+  const select = (r) => { renderBoard(r.id); renderAkte(r); };
+  wireSelection(board, (r) => { select(r); document.getElementById("akte").scrollIntoView({ behavior: "smooth", block: "start" }); });
+  select(detail);
+</script>
+</body>
+</html>
