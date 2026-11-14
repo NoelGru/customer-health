@@ -2,7 +2,9 @@
 
 Ein kleines, funktionierendes Dashboard für Customer Success im Bereich Paid Parking: Welche Parkflächen-Kunden brauchen gerade Aufmerksamkeit, warum, und was ist der nächste Schritt?
 
-**Live-Demo:** [customer-health-snowy.vercel.app](https://customer-health-snowy.vercel.app) · direkt zu einem gefährdeten Kunden: [Kreisklinikum Ammertal](https://customer-health-snowy.vercel.app/#/kunde/c07)
+**Live-Demo:** [noelgruber.de/customerhealth](https://noelgruber.de/customerhealth) · direkt zu einem gefährdeten Kunden: [Kreisklinikum Ammertal](https://noelgruber.de/customerhealth#/kunde/c07)
+
+Die Seite ist bewusst nicht für Suchmaschinen freigegeben (`noindex`), sie ist nur über den Link erreichbar.
 
 > Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden.
 > Alle Kunden, Namen und Zahlen sind erfunden.
@@ -57,6 +59,8 @@ Die Texte für die 8 gelben und roten Kunden wurden **einmalig beim Bauen mit Cl
 ## Technik
 
 Vite · React · TypeScript · Tailwind CSS · Recharts · Vitest. Kein Backend, keine Datenbank, keine Secrets: Die Daten liegen als JSON im Projekt, die Seite ist statisch auf Vercel gehostet.
+
+Hosting: Dieses Repo wird als eigenes Vercel-Projekt gebaut (`customer-health-snowy.vercel.app`). Die Website `noelgruber.de` leitet `/customerhealth` per Rewrite dorthin weiter. Deshalb baut Vite mit `base: "/customerhealth/"`, und [`vercel.json`](vercel.json) bildet den Unterpfad auf die Dateien ab und setzt `X-Robots-Tag: noindex`.
 
 ```bash
 npm install
