@@ -13,6 +13,8 @@ export function TrendChart({ weekly }: { weekly: WeeklyValue[] }) {
     payment: Math.round(w.paymentRate * 100),
     occupancy: Math.round(w.occupancy * 100),
   }));
+  // Wer in den Systemeinstellungen "Bewegung reduzieren" aktiviert hat, bekommt die Linien ohne Animation
+  const animate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   // Untere Grenze der Achse: nächstkleinerer Zehner unter dem kleinsten Wert, höchstens 40 %
   const min = Math.min(40, ...data.map((d) => Math.floor(Math.min(d.payment, d.occupancy) / 10) * 10));
 
@@ -32,8 +34,8 @@ export function TrendChart({ weekly }: { weekly: WeeklyValue[] }) {
             contentStyle={{ borderRadius: 12, border: "1px solid rgb(18 18 30 / 0.1)", boxShadow: "0 12px 24px -12px rgb(40 34 120 / 0.35)", fontSize: 12 }}
             labelStyle={{ fontFamily: "JetBrains Mono, monospace", fontSize: 11, color: "#535360" }}
           />
-          <Line type="monotone" dataKey="payment" stroke={PAYMENT} strokeWidth={2.5} dot={false} activeDot={{ r: 4 }} />
-          <Line type="monotone" dataKey="occupancy" stroke={OCCUPANCY} strokeWidth={2.5} strokeDasharray="5 4" dot={false} activeDot={{ r: 4 }} />
+          <Line type="monotone" dataKey="payment" stroke={PAYMENT} strokeWidth={2.5} dot={false} activeDot={{ r: 4 }} isAnimationActive={animate} />
+          <Line type="monotone" dataKey="occupancy" stroke={OCCUPANCY} strokeWidth={2.5} strokeDasharray="5 4" dot={false} activeDot={{ r: 4 }} isAnimationActive={animate} />
         </LineChart>
       </ResponsiveContainer>
     </div>
