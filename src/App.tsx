@@ -3,6 +3,7 @@ import data from "../data/customers.json";
 import type { CustomerData } from "./lib/types";
 import { applyFilters, buildViews, NO_FILTERS, portfolioKpis, type Filters } from "./lib/view";
 import { useHashSelection } from "./lib/useHashSelection";
+import { formatDate } from "./lib/format";
 import { TopBar } from "./components/TopBar";
 import { KpiBar } from "./components/KpiBar";
 import { FilterBar } from "./components/FilterBar";
@@ -55,7 +56,7 @@ export default function App() {
 
   return (
     <>
-      <TopBar asOf={asOf} />
+      <TopBar />
 
       <main className="mx-auto max-w-[1360px] px-4 sm:px-7">
         <header className="pb-4 pt-5 sm:pb-5 sm:pt-7">
@@ -92,7 +93,7 @@ export default function App() {
         </div>
 
         <footer className="py-7 font-mono text-[11.5px] text-dim">
-          Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden
+          Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden · Datenstand {formatDate(asOf, "short")}
         </footer>
       </main>
     </>
