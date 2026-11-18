@@ -1,12 +1,12 @@
 # Customer Health Dashboard · Prototyp
 
-Ein kleines, funktionierendes Dashboard für Customer Success im Bereich Paid Parking: Welche Parkflächen-Kunden brauchen gerade Aufmerksamkeit, warum, und was ist der nächste Schritt?
+Ein kleines, funktionierendes Dashboard für Customer Success, am Beispiel von Parkflächen-Kunden: Welche Kunden brauchen gerade Aufmerksamkeit, warum, und was ist der nächste Schritt?
 
 **Live-Demo:** [noelgruber.de/customerhealth](https://noelgruber.de/customerhealth) · direkt zu einem gefährdeten Kunden: [Kreisklinikum Ammertal](https://noelgruber.de/customerhealth#/kunde/c07)
 
-Die Seite ist bewusst nicht für Suchmaschinen freigegeben (`noindex`), sie ist nur über den Link erreichbar.
+Eine Erklärung mit Screenshots gibt es auf der [Projektseite](https://noelgruber.de/projekte/customer-health-dashboard). Das Dashboard selbst ist nicht für Suchmaschinen freigegeben (`noindex`).
 
-> Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden.
+> Prototyp von Noel Gruber · Beispieldaten.
 > Alle Kunden, Namen und Zahlen sind erfunden.
 
 ![Screenshot: Übersicht mit Kennzahlen, Kundenliste und Detailansicht des Kreisklinikums Ammertal](docs/img/screenshot-desktop.jpg)
@@ -24,7 +24,7 @@ Ein Dashboard für 20 erfundene Parkflächen-Kunden (Supermärkte, Kliniken, Hot
 
 ## Warum gebaut?
 
-Als Ergänzung zu meiner Bewerbung als Customer Success Manager. Ich wollte zeigen, wie ich an Customer Health herangehe: früh erkennen, die Ursache verstehen, konkret handeln. Und dass ich so ein Werkzeug nicht nur beschreiben, sondern auch bauen kann.
+Ich wollte ausprobieren, wie man Customer Health so abbildet, dass ein Team Probleme früh erkennt, die Ursache versteht und konkret handeln kann. Die Parkflächen sind dabei nur das Beispiel. Die gleiche Logik lässt sich auf andere B2B-SaaS-Produkte übertragen, dann eben mit Signalen wie Logins, genutzten Funktionen oder offenen Supportanfragen.
 
 ## Wie der Health Score funktioniert
 
@@ -71,7 +71,7 @@ npm run build    # fertige Seite nach dist/
 
 ```
 data/            Beispieldaten und vorab erzeugte Texte
-docs/            Plan, Lernnotizen, Video-Skript, Screenshot
+docs/            Plan, Lernnotizen, Screenshot
 design/mockups/  Design-Entwürfe (A, B, C und die gewählte Mischung D)
 src/lib/         Logik: Health Score, Filter, Kennzahlen (getestet)
 src/components/  Oberfläche

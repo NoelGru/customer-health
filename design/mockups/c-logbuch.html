@@ -120,14 +120,14 @@
   </nav>
   <div class="board" id="board"></div>
   <article class="akte" id="akte"></article>
-  <footer>Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden</footer>
+  <footer>Prototyp von Noel Gruber · Beispieldaten</footer>
 </div>
 
 <script type="module">
   import { rows, kpis, detail, asOfLabel, formatPercent, checklistFor, chartFor, wireSelection, esc } from "./shared.js";
   const C = { rot: "#b23a26", gelb: "#b98113", gruen: "#4c7a48" };
 
-  document.getElementById("asof").innerHTML = `Ausgabe vom ${asOfLabel}<br>Customer Success · Paid Parking`;
+  document.getElementById("asof").innerHTML = `Ausgabe vom ${asOfLabel}<br>Customer Success · Parkflächen`;
   document.getElementById("kpis").innerHTML = `
     <div><div class="v">${kpis.total}</div><div class="l">Kunden</div></div>
     <div><div class="v rot">${kpis.rot}</div><div class="l">gefährdet · ${kpis.gelb} beobachten</div></div>

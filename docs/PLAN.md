@@ -1,6 +1,6 @@
 # Plan: Customer-Health-Dashboard (Phase 0)
 
-Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden
+Prototyp von Noel Gruber · Beispieldaten
 
 Dieses Dokument hält fest, **was** gebaut wird und **warum so**. Es ist die Grundlage für alle weiteren Phasen.
 
@@ -41,7 +41,7 @@ customer-health-dashboard/
 * `data/` liegt bewusst **außerhalb** von `src/`: Daten und Code sind getrennt. Wer die Beispieldaten ändern will, muss keinen Code anfassen.
 * `src/lib/` enthält die „Denklogik“ (Score, Regeln) ohne jede Oberfläche. Dadurch lässt sie sich testen, ohne den Browser zu öffnen.
 * `src/components/` enthält nur Darstellung. Jede Komponente macht eine Sache.
-* Kein Router, kein Backend, keine Datenbank. Die Detailansicht wird über die Adresse `#/kunde/c07` geöffnet, damit man einen Kunden direkt verlinken kann (praktisch fürs Video).
+* Kein Router, kein Backend, keine Datenbank. Die Detailansicht wird über die Adresse `#/kunde/c07` geöffnet, damit man einen Kunden direkt verlinken kann (praktisch zum Teilen im Team).
 
 ---
 
@@ -195,4 +195,4 @@ Größen realistisch: Fitnessstudio 40 bis 70 Plätze, Klinik 140 bis 320, Shopp
 
 Vite + React + TypeScript · Tailwind CSS · Recharts · Vitest · Deployment als statische Seite auf Vercel. Keine API-Schlüssel, keine Secrets, kein Backend.
 
-Design (entschieden in Phase 3, nach vier Mockups in `design/mockups/`): Mockup D. App-Aufbau mit Tabelle und Detailspalte, Glas-Karten auf hellem Farbverlauf, Schrift Inter + JetBrains Mono, Ampelfarben nur für den Status. Akzentfarbe ist bewusst das Violett aus dem Wemolo-Logo (#5046E8), auf Noels Wunsch; Logo, Name und sonstiges Branding werden nicht übernommen. Footer: „Prototyp von Noel Gruber · Beispieldaten · nicht mit Wemolo verbunden“.
+Design (entschieden in Phase 3, nach vier Mockups in `design/mockups/`): Mockup D. App-Aufbau mit Tabelle und Detailspalte, Glas-Karten auf hellem Farbverlauf, Schrift Inter + JetBrains Mono, Ampelfarben nur für den Status. Akzentfarbe ist ein kräftiges Violett (#5046E8). Footer: „Prototyp von Noel Gruber · Beispieldaten · Datenstand …“.

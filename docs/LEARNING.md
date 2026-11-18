@@ -108,7 +108,7 @@ Erst die Ursache vor Ort suchen, bevor ich den Kunden anrufe: Ist ein Schild ver
 
 * **Erst Mockups, dann Code:** Design-Entscheidungen sind billig, solange es nur Skizzen sind. Wie beim Hausbau: Grundriss auf Papier ändern kostet nichts, eine Wand versetzen schon.
 * **Tabelle + Detailspalte:** Links „wer“, rechts „warum und was tun“. Ein Klick genügt, man verliert die Liste nie aus dem Blick.
-* **Jeder Kunde hat eine eigene Adresse** (`#/kunde/c07`). Man kann einen Kunden direkt verlinken, z. B. im Team-Chat oder im Video.
+* **Jeder Kunde hat eine eigene Adresse** (`#/kunde/c07`). Man kann einen Kunden direkt verlinken, z. B. im Team-Chat.
 * **Handy:** Die Liste wird zu Karten, die Detailansicht öffnet sich als eigene Seite mit „Zur Übersicht“. Auf dem Desktop zeigt die Detailspalte ohne Auswahl automatisch den dringendsten Kunden.
 * **Kleine Details, die im Alltag helfen:** „überfällig“ beim geplanten Go-live, unter „Offen“ nur die Punkte der aktuellen Phase, Filter mit „Zurücksetzen“.
 * **Logik bleibt außerhalb der Oberfläche:** Die Komponenten zeigen nur an. Rechnen, filtern und sortieren passiert in `src/lib/` und ist getestet.
@@ -162,11 +162,10 @@ Die Texte mit der Claude API erzeugen, wenn ein Kunde gelb oder rot wird, mit Ta
 1. **README** mit Live-Link, Screenshot, Erklärung des Health Scores und dem Abschnitt „So könnte man es live anbinden“ (Claude API mit Tageslimit und Rückfall auf die vorab erzeugten Texte, nur beschrieben).
 2. **GitHub:** öffentliches Repo `NoelGru/customer-health`. Alle Commits laufen über die GitHub-noreply-Adresse, die private E-Mail taucht nirgends auf. Vor dem Hochladen wurde das ganze Projekt nach privaten Daten und Schlüsseln durchsucht.
 3. **Vercel:** Das Projekt ist mit dem Repo verbunden. Jeder Push auf `main` baut die Seite automatisch neu. Live unter [customer-health-snowy.vercel.app](https://customer-health-snowy.vercel.app).
-4. **Video-Skript** in `docs/VIDEO-SKRIPT.md` (127 Wörter, mit Regieanweisungen).
 
 ### Warum so?
 
-* **Ein Link statt einer Datei:** Wer die Bewerbung liest, klickt einmal und sieht das Tool. Keine Installation, keine Hürde.
+* **Ein Link statt einer Datei:** Wer den Link bekommt, klickt einmal und sieht das Tool. Keine Installation, keine Hürde.
 * **README als Gebrauchsanweisung für Fremde:** Wer nur zwei Minuten hat, versteht dort Zweck, Logik und Grenzen, ohne Code zu lesen.
 * **Automatisches Deployment:** Eine Änderung im Repo ist ein paar Sekunden später live. Kein manueller Upload, der vergessen werden kann.
 * **Ehrlich über Grenzen:** Beispieldaten, vorab erzeugte Texte und die Live-Anbindung nur als Beschreibung sind klar benannt. Das schafft mehr Vertrauen als eine Demo, die mehr verspricht, als sie kann.

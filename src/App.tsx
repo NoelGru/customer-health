@@ -60,7 +60,7 @@ export default function App() {
 
       <main className="mx-auto max-w-[1360px] px-4 sm:px-7">
         <header className="pb-4 pt-5 sm:pb-5 sm:pt-7">
-          <p className="eyebrow">Customer Success · Paid Parking</p>
+          <p className="eyebrow">Customer Success · Parkflächen</p>
           <h1 className="mt-2 text-[26px] font-extrabold leading-[1.12] tracking-[-0.035em] sm:text-[34px]">
             Wer braucht <span className="gradient-text">heute</span> Aufmerksamkeit?
           </h1>
